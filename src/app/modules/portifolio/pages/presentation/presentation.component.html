@@ -1,0 +1,24 @@
+<main class="container-main">
+  <section class="container-main__infos">
+    <div class="container-main__content">
+      <div class="container-main__intro">
+        <span class="container-main__intro-greeting">Olá! Me chamo,</span>
+        <p class="container-main__intro-name">{{infos.name}}</p>
+        <p class="container-main__intro-title">Sou desenvolvedor</p>
+        <h1 class="container-main__intro-role">{{infos.role}}</h1>
+      </div>
+      <div class="container-main__obs">
+        <div class="container-main__alert">
+          <span class="container-main__alert-icon material-symbols-outlined">warning</span>
+          <p class="container-main__alert-text">{{warning.title}}</p>
+        </div>
+        <p class="container-main__message">{{warning.msg}}</p>
+      </div>
+
+      <div class="container-main__git">
+        <img (click)="scrollToBottom()" width="100px" style="cursor: pointer" src="/assets/gif/gif-down.gif">
+      </div>
+    </div>
+  </section>
+</main>
+

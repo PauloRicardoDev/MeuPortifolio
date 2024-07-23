@@ -1,0 +1,389 @@
+.container {
+  &__main {
+    background: linear-gradient(to bottom, rgb(14, 14, 14), rgba(0, 0, 0, 0.7)),
+    url("/assets/banner-background.png") no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__infos{
+    width: 70%;
+    margin: 0 auto 2rem auto;
+
+    &-title{
+      font-size: 3rem;
+      color: #A1FF44;
+    }
+
+    &-description{
+      color: white;
+    }
+  }
+
+  &__menu {
+    width: 70%;
+    height: 60vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.5rem;
+
+    &-cardA {
+      width: 100%;
+      height: 100%;
+      background-image: url("/assets/imgs-menu/imgs/photo-perfil.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 10px;
+      text-align: start;
+
+      &-content {
+        padding: 1rem;
+        border-radius: 10px;
+        font-weight: bolder;
+      }
+    }
+
+    &-grid {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      gap: 0.5rem;
+    }
+
+    &-card{
+      width: 100%;
+      max-height: 60vh;
+      min-height: 100%;
+      background: rgba(33, 33, 33, 0.76);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 10px;
+      cursor: pointer;
+      color: #525252;
+
+      &:hover {
+        color: #A1FF44;
+        transform: scale(.95);
+        transition: 0.5s;
+        backdrop-filter: blur(50px);
+        -webkit-backdrop-filter: blur(50px);
+      }
+
+      &-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 1rem;
+        height: 85%;
+      }
+
+    }
+
+  }
+}
+
+
+.aboutMeEnable,
+.expEnable,
+.habEnable,
+.eduEnable,
+.projectEnable {
+  background: #050505 !important;
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+
+.aboutMeDisable,
+.expDisable,
+.habDisable,
+.eduDisable,
+.projectDisable {
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+
+//btn-back
+.btn-back{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 3rem;
+  gap: .5rem;
+ color: #A1FF44;
+
+  &__button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    gap: .5rem;
+    border-radius: 10px;
+    background: #A1FF44;
+    color: black;
+    cursor: pointer;
+
+    &:hover{
+      transition: 1s;
+      background: #777777;
+      color: white;
+    }
+  }
+}
+
+//container (About Me)
+.profile{
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: .5fr 1fr;
+  align-items: flex-start;
+  padding: 2rem 0 5rem 0;
+  gap: 3rem;
+
+  &__img{
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  &__info{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__welcome{
+    font-size: 1rem;
+    color: white;
+  }
+
+  &__description{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 1rem;
+    text-align: justify;
+  }
+
+  &__text{
+    text-indent: 2rem;
+    color: #777777;
+
+    &:last-child{
+      color: #A1FF44;
+    }
+  }
+}
+
+//container (exp)
+.exp{
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: .5fr 1fr;
+  align-items: flex-start;
+  padding: 2rem 0 5rem 0;
+  gap: 3rem;
+
+  &__img{
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  &-info{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 1rem;
+
+    &__title{
+      color: #A1FF44;
+    }
+
+    &-list{
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: column;
+
+      &__item{
+        color: white;
+
+        &__text{
+          color: #777777;
+        }
+      }
+    }
+  }
+
+
+}
+
+//container (skills)
+.skills{
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: .5fr 1fr;
+  align-items: flex-start;
+  padding: 2rem 0 5rem 0;
+  gap: 3rem;
+
+  &-asideA{
+    &__img{
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    &-hardSkills{
+      &-title{
+        color: #ffffff;
+        margin: 2rem 0;
+      }
+
+      &-itens{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: .5rem;
+        gap: 1rem;
+      }
+    }
+  }
+
+  &-asideB{
+    &__title{
+      color: #ffffff;
+      margin-bottom: 2rem;
+    }
+
+    &__subtitle{
+      color: #777777;
+    }
+
+    &-accordion{
+      &__title{
+        color: #ffffff;
+        margin: 2rem 0;
+      }
+    }
+  }
+}
+
+//container (edu)
+.edu{
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: .5fr 1fr;
+  align-items: flex-start;
+  padding: 2rem 0 5rem 0;
+  gap: 3rem;
+
+  &-asideA{
+    &__img{
+      width: 100%;
+      border-radius: 10px;
+    }
+  }
+
+  &-asideB{
+    color: white;
+
+    &-list{
+      margin: 2rem 0;
+
+      &__item{
+        &-text{
+          margin: .5rem 0;
+          color: #777777;
+        }
+      }
+    }
+
+    &__subtitle{
+      margin-bottom: 2rem;
+      color: #A1FF44;
+    }
+  }
+}
+
+//notes
+.note{
+  margin-top: 1rem;
+  &__title{
+    color: white;
+  }
+  &__text{
+    font-size:.8rem;
+    margin:1rem 0;
+    color: #777777;
+    text-align: justify;
+    text-indent: 1rem;
+    line-height: 2rem;
+  }
+}
+
+@media (max-width: 1300px){
+  .container{
+    &__menu {
+      &-card {
+        font-size: .9rem;
+      }
+    }
+
+    &__main {
+      background: linear-gradient(to bottom, rgb(14, 14, 14), rgba(0, 0, 0, 0.7)),
+      url("/assets/banner-background.png") no-repeat center center fixed;
+      background-size: cover;
+      height: 130vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: 800px){
+  .container{
+    &__menu {
+      &-card {
+        font-size: .6rem;
+      }
+    }
+
+    &__main {
+      background: linear-gradient(to bottom, rgb(14, 14, 14), rgba(0, 0, 0, 0.7)),
+      url("/assets/banner-background.png") no-repeat center center fixed;
+      background-size: cover;
+      height: 130vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
+  .profile, .exp, .skills, .edu{
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    padding: 2rem 0 5rem 0;
+    gap: 3rem;
+  }
+
+}
+

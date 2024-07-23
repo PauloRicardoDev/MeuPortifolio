@@ -1,0 +1,271 @@
+<main class="container__main">
+  <section class="container__infos">
+    <h1 class="container__infos-title">Menu</h1>
+    <p class="container__infos-description">Click nos cards para me conhecer melhor.</p>
+  </section>
+  <section class="container__menu">
+    <section (click)="toggleDiv('aboutMe')" class="container__menu-card">
+      <div class="container__menu-cardA">
+        <div class="container__menu-cardA-content">
+          <span>{{itemMenu.about.title}}</span>
+        </div>
+      </div>
+    </section>
+    <section class="container__menu-grid">
+      <div (click)="toggleDiv('exp')" class="container__menu-card">
+        <div class="container__menu-card-info">
+          <span class="material-symbols-outlined">add_reaction</span>
+          <p>{{itemMenu.exp.title}}</p>
+          <p>{{itemMenu.exp.description}}</p>
+        </div>
+      </div>
+
+      <div (click)="toggleDiv('edu')" class="container__menu-card">
+        <div class="container__menu-card-info">
+          <span class="material-symbols-outlined">school</span>
+          <p>{{itemMenu.edu.title}}</p>
+          <p>{{itemMenu.edu.description}}</p>
+        </div>
+      </div>
+    </section>
+    <section class="container__menu-grid">
+      <div  (click)="toggleDiv('hab')" class="container__menu-card">
+        <div class="container__menu-card-info" >
+          <span class="material-symbols-outlined">downhill_skiing</span>
+          <p>{{itemMenu.hab.title}}</p>
+          <p>{{itemMenu.hab.description}}</p>
+        </div>
+      </div>
+      <div (click)="toggleDiv('project')" class="container__menu-card">
+        <div class="container__menu-card-info" >
+          <span class="material-symbols-outlined">folder_data</span>
+          <p>{{itemMenu.projects.title}}</p>
+          <p>{{itemMenu.projects.description}}</p>
+        </div>
+      </div>
+    </section>
+  </section>
+</main>
+
+<section #myDiv [ngClass]="{ 'aboutMeEnable': isAboutMe, 'aboutMeDisable': !isAboutMe }">
+  <div class="btn-back">
+    <button class="btn-back__button" (click)="toggleDiv('aboutMe')">
+      <span class="btn-back__icon material-symbols-outlined">reply</span>
+      <p class="btn-back__text">Voltar</p>
+    </button>
+    <h1 class="btn-back__title"> | {{itemMenu.about.title}}</h1>
+  </div>
+  <section class="profile">
+    <img class="profile__img" src="/assets/imgs-menu/imgs/perfil.png" alt="Perfil">
+    <aside class="profile__info">
+      <h2 class="profile__welcome">Olá, seja bem-vindo(a) ao meu perfil, espero que você esteja bem!</h2>
+      <article class="profile__description">
+        <p class="profile__text">Me chamo Paulo Ricardo Chagas, já estou há mais de um ano aprendendo e consolidando meu conhecimento em desenvolvimento de sistemas usando a linguagem Java e frameworks como ReactJS e Angular. Me identifico com todas as fases de codificação durante a confecção de um software, acho extremamente fascinante atuar desde o back até o front-end de um projeto, me destaco atualmente pela facilidade em me adaptar a projetos em andamento e por atuar na padronização de layout de sistemas.</p>
+        <p class="profile__text">Tenho facilidade em trabalhar em equipe, e em todas as equipes que atuei me senti profundamente abraçado e compreendido por meus colegas de trabalho.</p>
+        <p class="profile__text">Sou um profissional que valoriza e sempre tento desenvolver minhas soft skills junto com as minhas hard skills. Acredito firmemente que todo projeto de software carrega uma parcela da história de quem o programa, por isso sempre me dedico em minhas entregas.</p>
+      </article>
+    </aside>
+  </section>
+</section>
+
+<section #expDiv [ngClass]="{ 'expEnable': isExp, 'expDisable': !isExp }">
+  <div class="btn-back">
+    <button class="btn-back__button" (click)="toggleDiv('exp')">
+      <span class="btn-back__icon material-symbols-outlined">reply</span>
+      <p class="btn-back__text">Voltar</p>
+    </button>
+    <h1 class="btn-back__title"> | {{itemMenu.exp.title}}</h1>
+  </div>
+
+  <section class="exp">
+    <aside>
+      <img class="exp__img" src="/assets/imgs-menu/imgs/perfil.png" alt="Perfil">
+      <img class="exp__img" src="/assets/imgs-menu/imgs/logo-empresa.png" alt="logo última empresa">
+    </aside>
+    <aside class="exp-info">
+      <h2 class="exp-info__title">Minha última experiência</h2>
+      <ul class="exp-info-list">
+        <li class="exp-info-list__item">
+          <h3>Empresa</h3>
+          <p class="exp-info-list__item__text">{{lastExperience.company}}</p>
+        </li>
+        <li class="exp-info-list__item">
+          <h3>Duração</h3>
+          <p class="exp-info-list__item__text">{{lastExperience.duration}}</p>
+        </li>
+        <li class="exp-info-list__item">
+          <h3>Cargo</h3>
+          <p class="exp-info-list__item__text">{{lastExperience.office}}</p>
+        </li>
+        <li class="exp-info-list__item">
+          <h3>Atividades</h3>
+          <p class="exp-info-list__item__text">{{lastExperience.activities}}</p>
+        </li>
+        <li class="exp-info-list__item">
+          <h3>Projetos</h3>
+          @for (itens of lastExperience.projects; track itens){
+            <p class="exp-info-list__item__text">{{itens.project}}</p>
+          }
+        </li>
+      </ul>
+      <section class="note">
+        <h2 class="note__title">Nota Pessoal</h2>
+        <p class="note__text" style="color: #A1FF44">
+          {{ personalNoteEpx }}
+        </p>
+      </section>
+    </aside>
+  </section>
+</section>
+
+<section #habDiv [ngClass]="{ 'habEnable': ishab, 'habDisable': !ishab }">
+  <div class="btn-back">
+    <button class="btn-back__button" (click)="toggleDiv('hab')">
+      <span class="btn-back__icon material-symbols-outlined">reply</span>
+      <p class="btn-back__text">Voltar</p>
+    </button>
+    <h1 class="btn-back__title"> | {{itemMenu.hab.title}}</h1>
+  </div>
+  <section class="skills">
+    <aside class="skills-asideA">
+      <img class="skills-asideA__img" src="/assets/imgs-menu/imgs/perfil.png">
+      <div class="skills-asideA-hardSkills">
+        <h2 class="skills-asideA-hardSkills-title">Hard Skills (%)</h2>
+        @for (itens of hardSkills; track itens){
+          <div class="skills-asideA-hardSkills-itens">
+            <img
+              matTooltip="{{itens.percentage}}% {{itens.title}}"
+              matTooltipPosition="right"
+              style="width :30px; cursor: pointer"
+              src="{{itens.src}}" alt="{{itens.alt}}"
+            >
+            <mat-progress-bar mode="determinate" value="{{itens.percentage}}"></mat-progress-bar>
+          </div>
+        }
+      </div>
+    </aside>
+    <aside class="skills-asideB">
+      <h2 class="skills-asideB__title">Minhas habilidades!</h2>
+      <p class="skills-asideB__subtitle">
+        Além de minha paixão por desenvolvimento de sistemas,
+        acredito firmemente na importância das soft skills no ambiente de trabalho.
+      </p>
+      <div class="skills-asideB-accordion">
+        <h2 class="skills-asideB-accordion__title">Soft Skills</h2>
+        <cdk-accordion class="example-accordion">
+          @for (item of softSkills; track item; let index = $index) {
+            <cdk-accordion-item
+              #accordionItem="cdkAccordionItem"
+              class="example-accordion-item"
+              role="button"
+              tabindex="0"
+              [attr.id]="'accordion-header-' + index"
+              [attr.aria-expanded]="accordionItem.expanded"
+              [attr.aria-controls]="'accordion-body-' + index">
+              <div class="example-accordion-item-header" (click)="accordionItem.toggle()">
+                {{ item.name }}
+                <span class="example-accordion-item-description">
+                  Click to {{ accordionItem.expanded ? 'close' : 'open' }}
+                </span>
+              </div>
+              <div
+                class="example-accordion-item-body"
+                role="region"
+                [style.display]="accordionItem.expanded ? '' : 'none'"
+                [attr.id]="'accordion-body-' + index"
+                [attr.aria-labelledby]="'accordion-header-' + index">
+                {{ item.description }}
+              </div>
+            </cdk-accordion-item>
+          }
+        </cdk-accordion>
+      </div>
+
+      <section class="note">
+        <h2 class="note__title">Nota Pessoal</h2>
+        <p class="note__text">
+          {{ personalNoteHab }}
+        </p>
+      </section>
+
+    </aside>
+  </section>
+</section>
+
+<section #eduDiv [ngClass]="{ 'eduEnable': isEdu, 'eduDisable': !isEdu }">
+  <div class="btn-back">
+    <button class="btn-back__button" (click)="toggleDiv('edu')">
+      <span class="btn-back__icon material-symbols-outlined">reply</span>
+      <p class="btn-back__text">Voltar</p>
+    </button>
+    <h1 class="btn-back__title"> | {{itemMenu.edu.title}}</h1>
+  </div>
+
+  <section class="edu">
+    <aside class="edu-asideA">
+      <img class="edu-asideA__img" src="/assets/imgs-menu/imgs/perfil.png" alt="perfil">
+
+      <div style="color: white; margin: 2rem 0">
+        <h3>Graduado no programa de fromação</h3>
+        <span>Certificado abaixo</span>
+      </div>
+
+      <img class="edu-asideA__img" src="/assets/imgs-menu/imgs/certificado.png" alt="perfil">
+    </aside>
+
+    <aside class="edu-asideB">
+      <h2 class="edu-asideB__title">Graduação</h2>
+      <ul class="edu-asideB-list">
+        <li class="edu-asideB-list__item">
+          <h4>Curso</h4>
+          <p class="edu-asideB-list__item-text">{{courseName.name}}</p>
+        </li>
+        <li class="edu-asideB-list__item">
+          <h4>Status</h4>
+          <p class="edu-asideB-list__item-text">{{courseName.status}}</p>
+        </li>
+        <li class="edu-asideB-list__item">
+          <h4>Previsão de formação</h4>
+          <p class="edu-asideB-list__item-text">{{courseName.forecast}}</p>
+        </li>
+      </ul>
+      <h2 class="edu-asideB__subtitle">Cursos Avulsos</h2>
+      <cdk-accordion class="example-accordion">
+        @for (item of separateCourses; track item; let index = $index) {
+          <cdk-accordion-item
+            #accordionItem="cdkAccordionItem"
+            class="example-accordion-item"
+            role="button"
+            tabindex="0"
+            [attr.id]="'accordion-header-' + index"
+            [attr.aria-expanded]="accordionItem.expanded"
+            [attr.aria-controls]="'accordion-body-' + index">
+            <div class="example-accordion-item-header" (click)="accordionItem.toggle()">
+              {{ item.name }}
+              <span class="example-accordion-item-description">
+                  Click to {{ accordionItem.expanded ? 'close' : 'open' }}
+                </span>
+            </div>
+            <div
+              class="example-accordion-item-body"
+              role="region"
+              [style.display]="accordionItem.expanded ? '' : 'none'"
+              [attr.id]="'accordion-body-' + index"
+              [attr.aria-labelledby]="'accordion-header-' + index">
+
+              @for (itens of item.children; track itens){
+                <p style="margin-bottom: 1rem">{{itens.name}}</p>
+              }
+
+            </div>
+          </cdk-accordion-item>
+        }
+      </cdk-accordion>
+    </aside>
+  </section>
+</section>
+
+<section #projectDiv [ngClass]="{ 'projectEnable': isProject, 'projectDisable': !isProject }">
+  Projects Content
+</section>
+

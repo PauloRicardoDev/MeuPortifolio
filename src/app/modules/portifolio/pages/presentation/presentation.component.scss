@@ -1,0 +1,152 @@
+.container-main {
+  background: linear-gradient(to bottom, rgba(30, 31, 34, 0.68), rgb(0, 0, 0)),
+  url("/assets/banner-presentation.png") no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+
+  &__infos {
+    height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__content {
+    margin-top: 3rem;
+    width: 100%;
+    color: white;
+  }
+
+  &__intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    &-greeting {
+      font-size: 1rem;
+    }
+
+    &-name {
+      font-weight: bolder;
+      font-size: 2rem;
+    }
+
+    &-title {
+    }
+
+    &-role {
+      font-size: 9rem;
+      margin-left: -0.5rem;
+      color: #A1FF44;
+    }
+  }
+
+  &__alert {
+    color: #777777;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+
+    &-icon {
+    }
+
+    &-text {
+    }
+  }
+
+  &__message {
+    width: 300px;
+    color: #777777;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+  }
+
+  &__git{
+    margin-top: 2rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px){
+  .container-main {
+    background: linear-gradient(to bottom, rgba(30, 31, 34, 0.68), rgb(0, 0, 0)),
+    url("/assets/banner-presentation.png") no-repeat center center fixed;
+    background-size: cover;
+    height: 120vh;
+
+    &__infos {
+      height: 100vh;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__content {
+      width: 100%;
+      color: white;
+    }
+
+    &__intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      &-greeting {
+        font-size: .9rem;
+      }
+
+      &-name {
+        font-weight: bolder;
+        font-size: 1.5rem;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+      }
+
+      &-title {
+      }
+
+      &-role {
+        font-size: 4rem;
+        color: #A1FF44;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+    }
+
+    &__obs{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      &__alert {
+        color: #777777;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0.5rem;
+
+        &-icon {
+        }
+
+        &-text {
+        }
+      }
+
+      &__message {
+        width: 300px;
+        color: #777777;
+        font-size: 0.8rem;
+        margin-top: 1rem;
+
+      }
+    }
+
+  }
+}

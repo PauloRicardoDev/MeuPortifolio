@@ -279,7 +279,7 @@
 }
 
 //container (edu)
-.edu{
+.edu {
   width: 80%;
   margin: 0 auto;
   display: grid;
@@ -288,30 +288,55 @@
   padding: 2rem 0 5rem 0;
   gap: 3rem;
 
-  &-asideA{
-    &__img{
-      width: 100%;
-      border-radius: 10px;
-    }
-  }
+  &__aside {
+    &--a {
+      .edu__img {
+        width: 100%;
+        border-radius: 10px;
+      }
 
-  &-asideB{
-    color: white;
+      .edu__info {
+        color: white;
+        margin: 2rem 0;
 
-    &-list{
-      margin: 2rem 0;
+        &-title {
+          margin: 0;
+        }
 
-      &__item{
-        &-text{
-          margin: .5rem 0;
-          color: #777777;
+        &-subtitle {
+          margin: 0;
         }
       }
     }
 
-    &__subtitle{
-      margin-bottom: 2rem;
-      color: #A1FF44;
+    &--b {
+      color: white;
+
+      .edu__title {
+        margin: 0;
+      }
+
+      .edu__list {
+        margin: 2rem 0;
+
+        &-item {
+          margin: 0 0 1rem;
+
+          &-title {
+            margin: 0;
+          }
+
+          &-text {
+            margin: .5rem 0;
+            color: #777777;
+          }
+        }
+      }
+
+      .edu__subtitle {
+        margin-bottom: 2rem;
+        color: #A1FF44;
+      }
     }
   }
 }

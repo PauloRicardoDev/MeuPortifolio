@@ -128,7 +128,7 @@
   </div>
   <section class="skills">
     <aside class="skills-asideA">
-      <img class="skills-asideA__img" src="/assets/imgs-menu/imgs/perfil.png">
+      <img class="skills-asideA__img" src="/assets/imgs-menu/imgs/perfil.png" alt="imagem com um avatar de perfil">
       <div class="skills-asideA-hardSkills">
         <h2 class="skills-asideA-hardSkills-title">Hard Skills (%)</h2>
         @for (itens of hardSkills; track itens){
@@ -200,36 +200,35 @@
     </button>
     <h1 class="btn-back__title"> | {{itemMenu.edu.title}}</h1>
   </div>
-
   <section class="edu">
-    <aside class="edu-asideA">
-      <img class="edu-asideA__img" src="/assets/imgs-menu/imgs/perfil.png" alt="perfil">
+    <aside class="edu__aside edu__aside--a">
+      <img class="edu__img" src="/assets/imgs-menu/imgs/perfil.png" alt="perfil">
 
-      <div style="color: white; margin: 2rem 0">
-        <h3>Graduado no programa de fromação</h3>
-        <span>Certificado abaixo</span>
+      <div class="edu__info">
+        <h3 class="edu__info-title">Graduado no programa de formação</h3>
+        <span class="edu__info-subtitle">Certificado abaixo</span>
       </div>
 
-      <img class="edu-asideA__img" src="/assets/imgs-menu/imgs/certificado.png" alt="perfil">
+      <img class="edu__img" src="/assets/imgs-menu/imgs/certificado.png" alt="certificado">
     </aside>
 
-    <aside class="edu-asideB">
-      <h2 class="edu-asideB__title">Graduação</h2>
-      <ul class="edu-asideB-list">
-        <li class="edu-asideB-list__item">
-          <h4>Curso</h4>
-          <p class="edu-asideB-list__item-text">{{courseName.name}}</p>
+    <aside class="edu__aside edu__aside--b">
+      <h2 class="edu__title">Graduação</h2>
+      <ul class="edu__list">
+        <li class="edu__list-item">
+          <h4 class="edu__list-item-title">Curso</h4>
+          <p class="edu__list-item-text">{{courseName.name}}</p>
         </li>
-        <li class="edu-asideB-list__item">
-          <h4>Status</h4>
-          <p class="edu-asideB-list__item-text">{{courseName.status}}</p>
+        <li class="edu__list-item">
+          <h4 class="edu__list-item-title">Status</h4>
+          <p class="edu__list-item-text">{{courseName.status}}</p>
         </li>
-        <li class="edu-asideB-list__item">
-          <h4>Previsão de formação</h4>
-          <p class="edu-asideB-list__item-text">{{courseName.forecast}}</p>
+        <li class="edu__list-item">
+          <h4 class="edu__list-item-title">Previsão de formação</h4>
+          <p class="edu__list-item-text">{{courseName.forecast}}</p>
         </li>
       </ul>
-      <h2 class="edu-asideB__subtitle">Cursos Avulsos</h2>
+      <h2 class="edu__subtitle">Cursos Avulsos</h2>
       <cdk-accordion class="example-accordion">
         @for (item of separateCourses; track item; let index = $index) {
           <cdk-accordion-item

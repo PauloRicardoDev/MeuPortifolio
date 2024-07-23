@@ -253,12 +253,6 @@ export class MenuComponent {
     forecast: "Dezembro de 2024"
   }
 
-  training = [
-    {
-      name: '',
-    }
-  ]
-
   separateCourses = [
     {
       name : 'Formações',
@@ -321,7 +315,7 @@ export class MenuComponent {
 
   ]
 
-  expandedIndex = 0;
+  // expandedIndex = 0;
 
   isAboutMe: boolean = false;
   isExp: boolean = false;

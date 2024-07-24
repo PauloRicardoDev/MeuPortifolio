@@ -1,3 +1,5 @@
+@import '../../colors';
+
 //container (exp)
 .exp{
   width: 80%;
@@ -20,7 +22,7 @@
     gap: 1rem;
 
     &__title{
-      color: #A1FF44;
+      color: $text-highlight;
     }
 
     &__img{
@@ -31,16 +33,13 @@
     &-list{
       &__item{
         &-title{
-          color: white;
+          color: $text-secondary;
         }
         &-text{
-          color: #777777;
+          color: $text-muted;
           margin: .5rem 0;
         }
       }
     }
-
   }
-
-
 }

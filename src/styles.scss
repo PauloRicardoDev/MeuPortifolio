@@ -36,6 +36,7 @@ $project-portifolio-theme: mat.define-light-theme((
 @include mat.all-component-themes($project-portifolio-theme);
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+@import 'app/modules/portifolio/colors';
 
 *{
   padding: 0;
@@ -46,6 +47,7 @@ $project-portifolio-theme: mat.define-light-theme((
   font-family: 'Poppins', sans-serif;
 }
 
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
@@ -53,7 +55,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .example-accordion {
   display: block;
   width: 100%;
-  color: #777777;
+  color: $background-tertiary;
 }
 .example-accordion-item {
   display: block;
@@ -69,10 +71,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 .example-accordion-item-description {
   font-size: 0.85em;
-  color: #484848;
+  color: $text-dark;
 }
 .example-accordion-item-header{
-  color: #A1FF44;
+  color: $text-highlight;
   padding: 16px;
 }
 .example-accordion-item-body {
@@ -84,9 +86,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 .example-accordion-item-header:hover {
   cursor: pointer;
-  background-color: #A1FF44;
+  background-color: $background-secondary;
   transition: 1s;
-  color: black;
+  color: $text-primary;
 }
 .example-accordion-item:first-child {
   border-top-left-radius: 4px;
@@ -113,13 +115,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     padding: 1rem;
     gap: .5rem;
     border-radius: 10px;
-    background: #A1FF44;
-    color: black;
+    background: $background-secondary;
+    color: $text-primary;
     cursor: pointer;
 
     &:hover{
       transition: 1s;
-      background: #777777;
+      background: $background-tertiary;
       color: white;
     }
   }
@@ -128,7 +130,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 //graduation
 .graduation{
   &__title{
-    color: #A1FF44;
+    color: $text-highlight;
     margin: 1rem 0;
   }
 
@@ -143,7 +145,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
       &-text{
         margin: .5rem 0;
-        color: #777777;
+        color: $text-muted;
       }
     }
   }
@@ -158,7 +160,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   &__text{
     font-size:.8rem;
     margin:1rem 0;
-    color: #777777;
+    color: $text-muted;
     text-align: justify;
     text-indent: 1rem;
     line-height: 2rem;
@@ -172,7 +174,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     color: #b0b0b0;
   }
   .example-accordion-item-header{
-    color: #A1FF44;
+    color: $text-highlight;
     padding: 16px;
     font-size: .8rem;
   }

@@ -1,3 +1,5 @@
+@import '../../colors';
+
 //container (skills)
 .skills{
   width: 80%;
@@ -16,7 +18,7 @@
 
     &-hardSkills{
       &-title{
-        color: #ffffff;
+        color: $text-secondary;
         margin: 2rem 0;
       }
 
@@ -32,17 +34,17 @@
 
   &-asideB{
     &__title{
-      color: #ffffff;
+      color: $text-secondary;
       margin-bottom: 2rem;
     }
 
     &__subtitle{
-      color: #777777;
+      color: $text-muted;
     }
 
     &-accordion{
       &__title{
-        color: #ffffff;
+        color: $text-secondary;
         margin: 2rem 0;
       }
     }

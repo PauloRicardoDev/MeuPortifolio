@@ -1,3 +1,4 @@
+@import '../../colors';
 @import "menu-profile.component";
 @import "menu-exp.component";
 @import "menu-edu.component";
@@ -23,11 +24,11 @@
 
     &-title{
       font-size: 3rem;
-      color: #A1FF44;
+      color: $text-highlight;
     }
 
     &-description{
-      color: white;
+      color:$text-secondary;
     }
   }
 
@@ -70,10 +71,10 @@
       -webkit-backdrop-filter: blur(10px);
       border-radius: 10px;
       cursor: pointer;
-      color: #525252;
+      color: $secondary-color;
 
       &:hover {
-        color: #A1FF44;
+        color: $text-highlight;
         transform: scale(.95);
         transition: 0.5s;
         backdrop-filter: blur(50px);
@@ -100,7 +101,7 @@
 .habEnable,
 .eduEnable,
 .projectEnable {
-  background: #050505 !important;
+  background: $background-primary !important;
   opacity: 1;
   transition: all 0.5s ease;
 }

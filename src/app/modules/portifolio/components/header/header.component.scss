@@ -1,3 +1,5 @@
+@import '../../colors';
+
 .container {
   &__header {
     display: flex;
@@ -24,21 +26,21 @@
       align-items: center;
       gap: 0.5rem;
       padding: 0.5rem 1rem;
-      background: #2a2a2a;
-      color: #777777;
+      background: $tertiary-color;
+      color: $text-muted;
       border-radius: 10px;
       cursor: pointer;
       transition: background 0.3s, color 0.3s;
 
       &:hover {
-        background: #a1ff44;
-        color: #000000;
+        background: $background-secondary;
+        color: $text-primary;
       }
 
       &:disabled {
         cursor: not-allowed;
         background: #2a2a2a;
-        color: #777777;
+        color: $text-muted;
       }
     }
   }

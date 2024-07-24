@@ -1,3 +1,5 @@
+@import '../../colors';
+
 //container (About Me)
 .profile{
   width: 80%;
@@ -22,7 +24,7 @@
 
   &__welcome{
     font-size: 1.5rem;
-    color: white;
+    color: $text-secondary;
   }
 
   &__description{
@@ -35,7 +37,7 @@
 
   &__text{
     text-indent: 2rem;
-    color: #777777;
+    color: $text-muted;
     line-height: 2rem;
   }
 
@@ -45,12 +47,12 @@
     border-radius: 10px;
 
     &-title{
-      color: #A1FF44;
+      color: $text-highlight;
       margin-bottom: 1rem;
     }
 
     &-text{
-      color: white;
+      color: $text-secondary;
       text-align: justify;
       text-indent: 1rem;
       line-height: 2rem;
@@ -61,7 +63,7 @@
   &__toHelpYou{
     &-title{
       padding: 1rem 0 2rem 0;
-      color: #777777;
+      color: $text-muted;
     }
   }
 }

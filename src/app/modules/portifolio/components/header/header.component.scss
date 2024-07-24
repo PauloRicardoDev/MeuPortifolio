@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: flex-end;
     padding: 1rem;
-    position: fixed; /* Torna o cabeçalho fixo no topo */
+    position: fixed;
     top: 0;
     width: 100%;
     box-sizing: border-box;
@@ -50,7 +50,7 @@
     width: 20px;
     height: 20px;
     animation: spin 1s linear infinite;
-    margin-right: 8px; /* Ajuste conforme necessário */
+    margin-right: 8px;
   }
 
   @keyframes spin {

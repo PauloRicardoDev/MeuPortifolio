@@ -1,5 +1,5 @@
 .container {
-  &__header{
+  &__header {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -10,80 +10,72 @@
     box-sizing: border-box;
     z-index: 1000;
     background: rgba(0, 0, 0, 0.04);
-    backdrop-filter: blur(100px);
+    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
   }
 
-  &__buttons{
+  &__buttons {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 1rem;
 
-    &-button{
+    &-button {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: .5rem;
-      padding: .5rem 1rem;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
       background: #2a2a2a;
       color: #777777;
       border-radius: 10px;
       cursor: pointer;
+      transition: background 0.3s, color 0.3s;
 
-      &:hover{
-        transition:1s;
-        background: #A1FF44;
-        color: #000000
+      &:hover {
+        background: #a1ff44;
+        color: #000000;
       }
-    }
-  }
-}
 
-@media (max-width: 800px){
-  .container {
-    &__header{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 1rem;
-      position: fixed; /* Torna o cabeçalho fixo no topo */
-      top: 0;
-      width: 100%;
-      box-sizing: border-box;
-      z-index: 1000;
-      background: rgba(0, 0, 0, 0.04);
-      backdrop-filter: blur(100px);
-      -webkit-backdrop-filter: blur(10px);
-    }
-
-    &__buttons{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-
-      &-button{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: .5rem;
-        padding: .5rem 1rem;
+      &:disabled {
+        cursor: not-allowed;
         background: #2a2a2a;
         color: #777777;
-        border-radius: 10px;
-        cursor: pointer;
-
-        &:hover{
-          transition:1s;
-          background: #A1FF44;
-          color: #000000
-        }
       }
     }
   }
 
-  p{
-    font-size: .7rem;
+  .spinner {
+    border: 3px solid rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    border-top: 3px solid #fff;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    margin-right: 8px; /* Ajuste conforme necessário */
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @media (max-width: 800px) {
+    &__header {
+      justify-content: center;
+    }
+
+    &__buttons {
+      flex-direction: column;
+      gap: 0.5rem;
+
+      &-button {
+        width: 100%;
+        justify-content: center;
+        padding: 0.5rem;
+      }
+    }
+
+    p {
+      font-size: 0.7rem;
+    }
   }
 }

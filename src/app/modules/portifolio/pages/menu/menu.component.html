@@ -56,14 +56,71 @@
     <h1 class="btn-back__title"> | {{itemMenu.about.title}}</h1>
   </div>
   <section class="profile">
-    <img class="profile__img" src="/assets/imgs-menu/imgs/perfil.png" alt="Perfil">
+    <aside>
+      <img class="profile__img" src="/assets/imgs-menu/imgs/perfil.png" alt="Perfil">
+      <h2 class="graduation__title">Graduação</h2>
+      <ul class="graduation__list">
+        <li class="graduation__list-item">
+          <h4 class="graduation__list-item-title">Instituição</h4>
+          <p class="graduation__list-item-text">{{courseName.instituicao}}</p>
+        </li>
+        <li class="graduation__list-item">
+          <h4 class="graduation__list-item-title">Curso</h4>
+          <p class="graduation__list-item-text">{{courseName.name}}</p>
+        </li>
+        <li class="graduation__list-item">
+          <h4 class="graduation__list-item-title">Status</h4>
+          <p class="graduation__list-item-text">{{courseName.status}}</p>
+        </li>
+        <li class="graduation__list-item">
+          <h4 class="graduation__list-item-title">Previsão de formação</h4>
+          <p class="graduation__list-item-text">{{courseName.forecast}}</p>
+        </li>
+      </ul>
+    </aside>
+
     <aside class="profile__info">
-      <h2 class="profile__welcome">Olá, seja bem-vindo(a) ao meu perfil, espero que você esteja bem!</h2>
+      <h2 class="profile__welcome">Olá, seja bem vindo(a)!</h2>
       <article class="profile__description">
-        <p class="profile__text">Me chamo Paulo Ricardo Chagas, já estou há mais de um ano aprendendo e consolidando meu conhecimento em desenvolvimento de sistemas usando a linguagem Java e frameworks como ReactJS e Angular. Me identifico com todas as fases de codificação durante a confecção de um software, acho extremamente fascinante atuar desde o back até o front-end de um projeto, me destaco atualmente pela facilidade em me adaptar a projetos em andamento e por atuar na padronização de layout de sistemas.</p>
-        <p class="profile__text">Tenho facilidade em trabalhar em equipe, e em todas as equipes que atuei me senti profundamente abraçado e compreendido por meus colegas de trabalho.</p>
-        <p class="profile__text">Sou um profissional que valoriza e sempre tento desenvolver minhas soft skills junto com as minhas hard skills. Acredito firmemente que todo projeto de software carrega uma parcela da história de quem o programa, por isso sempre me dedico em minhas entregas.</p>
+        <p class="profile__text">{{aboutMe.textPresentation}}</p>
+        <p class="profile__text">{{aboutMe.textPresentationEmphasis}}</p>
       </article>
+
+      <div class="profile__philosophy">
+        <h3 class="profile__philosophy-title">Minha Filosofia como desenvolvedor</h3>
+        <p class="profile__philosophy-text">{{aboutMe.textMyPhilosophy}}</p>
+      </div>
+
+      <div class="profile__toHelpYou">
+        <h4 class="profile__toHelpYou-title">como posso ajudar seu negócio  e sua empresa!</h4>
+        <cdk-accordion class="example-accordion">
+          @for (item of toHelpYou; track item; let index = $index) {
+            <cdk-accordion-item
+              #accordionItem="cdkAccordionItem"
+              class="example-accordion-item"
+              role="button"
+              tabindex="0"
+              [attr.id]="'accordion-header-' + index"
+              [attr.aria-expanded]="accordionItem.expanded"
+              [attr.aria-controls]="'accordion-body-' + index">
+              <div class="example-accordion-item-header" (click)="accordionItem.toggle()">
+                {{ item.title }}
+                <span class="example-accordion-item-description">
+                Click para {{ accordionItem.expanded ? 'fechar' : 'abrir' }}
+              </span>
+              </div>
+              <div
+                class="example-accordion-item-body"
+                role="region"
+                [style.display]="accordionItem.expanded ? '' : 'none'"
+                [attr.id]="'accordion-body-' + index"
+                [attr.aria-labelledby]="'accordion-header-' + index">
+                <p>{{item.informations}}</p>
+              </div>
+            </cdk-accordion-item>
+          }
+        </cdk-accordion>
+      </div>
     </aside>
   </section>
 </section>
@@ -80,40 +137,40 @@
   <section class="exp">
     <aside>
       <img class="exp__img" src="/assets/imgs-menu/imgs/perfil.png" alt="Perfil">
-      <img class="exp__img" src="/assets/imgs-menu/imgs/logo-empresa.png" alt="logo última empresa">
-    </aside>
-    <aside class="exp-info">
-      <h2 class="exp-info__title">Minha última experiência</h2>
-      <ul class="exp-info-list">
-        <li class="exp-info-list__item">
-          <h3>Empresa</h3>
-          <p class="exp-info-list__item__text">{{lastExperience.company}}</p>
-        </li>
-        <li class="exp-info-list__item">
-          <h3>Duração</h3>
-          <p class="exp-info-list__item__text">{{lastExperience.duration}}</p>
-        </li>
-        <li class="exp-info-list__item">
-          <h3>Cargo</h3>
-          <p class="exp-info-list__item__text">{{lastExperience.office}}</p>
-        </li>
-        <li class="exp-info-list__item">
-          <h3>Atividades</h3>
-          <p class="exp-info-list__item__text">{{lastExperience.activities}}</p>
-        </li>
-        <li class="exp-info-list__item">
-          <h3>Projetos</h3>
-          @for (itens of lastExperience.projects; track itens){
-            <p class="exp-info-list__item__text">{{itens.project}}</p>
-          }
-        </li>
-      </ul>
       <section class="note">
         <h2 class="note__title">Nota Pessoal</h2>
         <p class="note__text" style="color: #A1FF44">
           {{ personalNoteEpx }}
         </p>
       </section>
+    </aside>
+    <aside class="exp-info">
+      <h2 class="exp-info__title">Minha última experiência</h2>
+      <img class="exp-info__img" src="/assets/imgs-menu/imgs/logo-empresa.png" alt="logo última empresa">
+      <ul class="exp-info-list">
+        <li class="exp-info-list__item">
+          <h3 class="exp-info-list__item-title">Empresa</h3>
+          <p class="exp-info-list__item-text">{{lastExperience.company}}</p>
+        </li>
+        <li class="exp-info-list__item">
+          <h3 class="exp-info-list__item-title">Duração</h3>
+          <p class="exp-info-list__item-text">{{lastExperience.duration}}</p>
+        </li>
+        <li class="exp-info-list__item">
+          <h3 class="exp-info-list__item-title">Cargo</h3>
+          <p class="exp-info-list__item-text">{{lastExperience.office}}</p>
+        </li>
+        <li class="exp-info-list__item">
+          <h3 class="exp-info-list__item-title">Atividades</h3>
+          <p class="exp-info-list__item-text">{{lastExperience.activities}}</p>
+        </li>
+        <li class="exp-info-list__item">
+          <h3 class="exp-info-list__item-title">Projetos</h3>
+          @for (itens of lastExperience.projects; track itens){
+            <p class="exp-info-list__item-text">{{itens.project}}</p>
+          }
+        </li>
+      </ul>
     </aside>
   </section>
 </section>
@@ -165,7 +222,7 @@
               <div class="example-accordion-item-header" (click)="accordionItem.toggle()">
                 {{ item.name }}
                 <span class="example-accordion-item-description">
-                  Click to {{ accordionItem.expanded ? 'close' : 'open' }}
+                  Click para {{ accordionItem.expanded ? 'fechar' : 'abrir' }}
                 </span>
               </div>
               <div
@@ -204,31 +261,34 @@
     <aside class="edu__aside edu__aside--a">
       <img class="edu__img" src="/assets/imgs-menu/imgs/perfil.png" alt="perfil">
 
-      <div class="edu__info">
-        <h3 class="edu__info-title">Graduado no programa de formação</h3>
-        <span class="edu__info-subtitle">Certificado abaixo</span>
-      </div>
-
-      <img class="edu__img" src="/assets/imgs-menu/imgs/certificado.png" alt="certificado">
+      <h2 class="graduation__title">Graduação</h2>
+      <ul class="graduation__list">
+        <li class="graduation__list-item">
+          <h4 class="graduation__list-item-title">Instituição</h4>
+          <p class="graduation__list-item-text">{{courseName.instituicao}}</p>
+        </li>
+        <li class="graduation__list-item">
+          <h4 class="graduation__list-item-title">Curso</h4>
+          <p class="graduation__list-item-text">{{courseName.name}}</p>
+        </li>
+        <li class="graduation__list-item">
+          <h4 class="graduation__list-item-title">Status</h4>
+          <p class="graduation__list-item-text">{{courseName.status}}</p>
+        </li>
+        <li class="graduation__list-item">
+          <h4 class="graduation__list-item-title">Previsão de formação</h4>
+          <p class="graduation__list-item-text">{{courseName.forecast}}</p>
+        </li>
+      </ul>
     </aside>
 
     <aside class="edu__aside edu__aside--b">
-      <h2 class="edu__title">Graduação</h2>
-      <ul class="edu__list">
-        <li class="edu__list-item">
-          <h4 class="edu__list-item-title">Curso</h4>
-          <p class="edu__list-item-text">{{courseName.name}}</p>
-        </li>
-        <li class="edu__list-item">
-          <h4 class="edu__list-item-title">Status</h4>
-          <p class="edu__list-item-text">{{courseName.status}}</p>
-        </li>
-        <li class="edu__list-item">
-          <h4 class="edu__list-item-title">Previsão de formação</h4>
-          <p class="edu__list-item-text">{{courseName.forecast}}</p>
-        </li>
-      </ul>
-      <h2 class="edu__subtitle">Cursos Avulsos</h2>
+      <h2 class="edu__aside--b-title">Formações e cursos avulsos</h2>
+      <p class="edu__aside--b-text">
+        Tenho mais de um ano de experiência em desenvolvimento de sistemas com Java e frameworks como ReactJS e Angular.
+        Durante esse período, participei de diversos cursos e certificações para aprimorar minhas habilidades.
+        Estou sempre em busca de novos conhecimentos para me manter atualizado e entregar soluções de alta qualidade.
+      </p>
       <cdk-accordion class="example-accordion">
         @for (item of separateCourses; track item; let index = $index) {
           <cdk-accordion-item
@@ -242,8 +302,8 @@
             <div class="example-accordion-item-header" (click)="accordionItem.toggle()">
               {{ item.name }}
               <span class="example-accordion-item-description">
-                  Click to {{ accordionItem.expanded ? 'close' : 'open' }}
-                </span>
+                Click para {{ accordionItem.expanded ? 'fechar' : 'abrir' }}
+              </span>
             </div>
             <div
               class="example-accordion-item-body"

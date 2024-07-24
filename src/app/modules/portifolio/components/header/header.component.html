@@ -1,16 +1,17 @@
 <header class="container__header">
   <aside class="container__buttons">
-    <button (click)="linkLinkedin()" class="container__buttons-button">
+    <button (click)="linkLinkedin()" class="container__buttons-button" aria-label="LinkedIn">
       <span class="material-symbols-outlined">link</span>
-      <p>Likedin</p>
+      <p>LinkedIn</p> <!-- Correção no texto -->
     </button>
-    <button (click)="linkWhatsApp()" class="container__buttons-button">
+    <button (click)="linkWhatsApp()" class="container__buttons-button" aria-label="WhatsApp">
       <span class="material-symbols-outlined">link</span>
       <p>WhatsApp</p>
     </button>
-    <button (click)="downloadPDF()" class="container__buttons-button">
-      <span class="material-symbols-outlined">download_for_offline</span>
-      <p>Baixar CV</p>
+    <button (click)="downloadPDF()" [disabled]="isLoading" class="container__buttons-button">
+      <span *ngIf="isLoading" class="spinner"></span>
+      <span *ngIf="!isLoading" class="material-symbols-outlined">download_for_offline</span>
+      <p>{{ isLoading ? 'Baixando...' : 'Baixar CV' }}</p>
     </button>
   </aside>
 </header>

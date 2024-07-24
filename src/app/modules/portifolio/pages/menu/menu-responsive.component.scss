@@ -1,0 +1,55 @@
+//Config Resposnsive
+@media (max-width: 1300px){
+  .container{
+    &__menu {
+      &-card {
+        font-size: .9rem;
+      }
+    }
+
+    &__main {
+      background: linear-gradient(to bottom, rgb(14, 14, 14), rgba(0, 0, 0, 0.7)),
+      url("/assets/banner-background.png") no-repeat center center fixed;
+      background-size: cover;
+      height: 130vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: 800px){
+  .container{
+    &__menu {
+      &-card {
+        font-size: .6rem;
+      }
+    }
+
+    &__main {
+      background: linear-gradient(to bottom, rgb(14, 14, 14), rgba(0, 0, 0, 0.7)),
+      url("/assets/banner-background.png") no-repeat center center fixed;
+      background-size: cover;
+      height: 130vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
+  .profile, .exp, .skills, .edu{
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    padding: 2rem 0 5rem 0;
+    gap: 3rem;
+  }
+
+}

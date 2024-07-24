@@ -9,8 +9,6 @@
       <p>WhatsApp</p>
     </button>
     <button (click)="downloadPDF()" [disabled]="isLoading" class="container__buttons-button">
-      <span *ngIf="isLoading" class="spinner"></span>
-      <span *ngIf="!isLoading" class="material-symbols-outlined">download_for_offline</span>
       <p>{{ isLoading ? 'Baixando...' : 'Baixar CV' }}</p>
     </button>
   </aside>

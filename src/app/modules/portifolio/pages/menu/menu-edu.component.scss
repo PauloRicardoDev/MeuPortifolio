@@ -1,0 +1,56 @@
+//container (edu)
+.edu {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: .5fr 1fr;
+  align-items: flex-start;
+  padding: 2rem 0 5rem 0;
+  gap: 3rem;
+
+  &__aside {
+    &--a {
+      .edu__img {
+        width: 100%;
+        border-radius: 10px;
+      }
+    }
+
+    &--b {
+      color: white;
+
+      &-text{
+        text-indent: 1rem;
+        text-align: justify;
+        color: #777777;
+        margin: 2rem 0;
+        line-height: 2rem;
+      }
+
+      &-title{
+        color: #A1FF44;
+      }
+
+      .edu__title {
+        margin: 0;
+      }
+
+      .edu__list {
+        margin: 2rem 0;
+
+        &-item {
+          margin: 0 0 1rem;
+
+          &-title {
+            margin: 0;
+          }
+
+          &-text {
+            margin: .5rem 0;
+            color: #777777;
+          }
+        }
+      }
+    }
+  }
+}

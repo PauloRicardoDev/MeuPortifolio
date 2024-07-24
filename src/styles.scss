@@ -148,3 +148,19 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     }
   }
 }
+
+//notes
+.note{
+  margin-top: 1rem;
+  &__title{
+    color: white;
+  }
+  &__text{
+    font-size:.8rem;
+    margin:1rem 0;
+    color: #777777;
+    text-align: justify;
+    text-indent: 1rem;
+    line-height: 2rem;
+  }
+}

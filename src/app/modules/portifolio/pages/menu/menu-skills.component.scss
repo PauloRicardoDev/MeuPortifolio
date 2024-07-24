@@ -1,0 +1,50 @@
+//container (skills)
+.skills{
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: .5fr 1fr;
+  align-items: flex-start;
+  padding: 2rem 0 5rem 0;
+  gap: 3rem;
+
+  &-asideA{
+    &__img{
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    &-hardSkills{
+      &-title{
+        color: #ffffff;
+        margin: 2rem 0;
+      }
+
+      &-itens{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: .5rem;
+        gap: 1rem;
+      }
+    }
+  }
+
+  &-asideB{
+    &__title{
+      color: #ffffff;
+      margin-bottom: 2rem;
+    }
+
+    &__subtitle{
+      color: #777777;
+    }
+
+    &-accordion{
+      &__title{
+        color: #ffffff;
+        margin: 2rem 0;
+      }
+    }
+  }
+}

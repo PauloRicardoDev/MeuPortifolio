@@ -1,0 +1,46 @@
+//container (exp)
+.exp{
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: .5fr 1fr;
+  align-items: flex-start;
+  padding: 2rem 0 5rem 0;
+  gap: 3rem;
+
+  &__img{
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  &-info{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 1rem;
+
+    &__title{
+      color: #A1FF44;
+    }
+
+    &__img{
+      width: 100px;
+      border-radius: 10px;
+    }
+
+    &-list{
+      &__item{
+        &-title{
+          color: white;
+        }
+        &-text{
+          color: #777777;
+          margin: .5rem 0;
+        }
+      }
+    }
+
+  }
+
+
+}

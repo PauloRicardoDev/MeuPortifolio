@@ -24,15 +24,10 @@ export class PresentationComponent {
       'clique nos cards!'
   }
 
-  constructor(
-    private router: Router
-  ) {
-  }
-
   scrollToBottom(): void {
     window.scrollTo({
       top: document.body.scrollHeight,
-      behavior: 'smooth' // Rola de forma suave
+      behavior: 'smooth'
     });
   }
 

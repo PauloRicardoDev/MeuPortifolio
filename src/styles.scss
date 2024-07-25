@@ -167,6 +167,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   }
 }
 
+//icom-menu-cards
+.icon-menu{
+  padding: 1rem;
+  border-radius: 50%;
+  background: rgba(119,119,119,0.16);
+}
+
 
 @media (max-width: 500px) {
   .example-accordion-item-body {

@@ -328,6 +328,19 @@
 </section>
 
 <section #projectDiv [ngClass]="{ 'projectEnable': isProject, 'projectDisable': !isProject }">
-  Projects Content
+  <div class="btn-back">
+    <button class="btn-back__button" (click)="toggleDiv('project')">
+      <span class="btn-back__icon material-symbols-outlined">reply</span>
+      <p class="btn-back__text">Voltar</p>
+    </button>
+    <h1 class="btn-back__title"> | {{itemMenu.projects.title}}</h1>
+  </div>
+  <section class="projects">
+    <ul style="color: #FFFFFF">
+      <li>
+        ssssssssssssssss
+      </li>
+    </ul>
+  </section>
 </section>
 

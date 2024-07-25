@@ -1,0 +1,13 @@
+@import '../../colors';
+
+//container projects
+.projects{
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: .5fr 1fr;
+  align-items: flex-start;
+  padding: 2rem 0 5rem 0;
+  gap: 3rem;
+
+}

@@ -28,6 +28,16 @@
         justify-content: flex-start;
         margin-bottom: .5rem;
         gap: 1rem;
+
+        &-indicadores{
+          color: $text-highlight;
+          width: 100%;
+
+          &-title{
+            color: #6e8aff;
+            font-size: .8rem;
+          }
+        }
       }
     }
   }

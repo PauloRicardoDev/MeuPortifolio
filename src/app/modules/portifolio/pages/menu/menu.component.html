@@ -191,12 +191,19 @@
         @for (itens of hardSkills; track itens){
           <div class="skills-asideA-hardSkills-itens">
             <img
-              matTooltip="{{itens.percentage}}% {{itens.title}}"
+              matTooltip=""
               matTooltipPosition="right"
               style="width :30px; cursor: pointer"
               src="{{itens.src}}" alt="{{itens.alt}}"
             >
-            <mat-progress-bar mode="determinate" value="{{itens.percentage}}"></mat-progress-bar>
+
+            <div class="skills-asideA-hardSkills-itens-indicadores">
+              <span class="skills-asideA-hardSkills-itens-indicadores-title">
+                {{itens.percentage}}% {{itens.title}}
+              </span>
+              <mat-progress-bar mode="determinate" value="{{itens.percentage}}"></mat-progress-bar>
+            </div>
+
           </div>
         }
       </div>

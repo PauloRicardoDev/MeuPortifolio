@@ -367,7 +367,6 @@ export class MenuComponent {
   ]
 
   // expandedIndex = 0;
-
   isAboutMe: boolean = false;
   isExp: boolean = false;
   ishab: boolean = false;

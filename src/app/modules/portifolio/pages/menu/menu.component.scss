@@ -8,7 +8,7 @@
 .container {
   &__main {
     background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(9, 9, 9));
-    //url("/assets/banner-background.png") no-repeat; // center center  fixed
+    //url("/assets/banner-menu.png") no-repeat; // center center  fixed
     background-size: cover;
     height: 100vh;
     margin: 0;
@@ -48,6 +48,7 @@
       background-repeat: no-repeat;
       border-radius: 10px;
       text-align: start;
+      color: $text-primary;
 
       &:hover {
         color: $text-primary;
@@ -76,9 +77,9 @@
       border-radius: 10px;
       cursor: pointer;
       color: $text-muted;
-      background-image: url("/assets/background-card.png");
-      background-size: cover;
-      background-repeat: no-repeat;
+      //background-image: url("/assets/background-card.png");
+      //background-size: cover;
+      //background-repeat: no-repeat;
 
       &:hover {
         color: $text-highlight;

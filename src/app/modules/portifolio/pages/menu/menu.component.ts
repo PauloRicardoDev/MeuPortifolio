@@ -366,6 +366,39 @@ export class MenuComponent {
 
   ]
 
+  //PROJECTS
+  projectsCards = [
+    {
+      src: 'assets/projects-imgs/project-gardenHome.png',
+      name: 'Projeto Garden At Home',
+      description: 'projeto landing page sobre cactos e suculentas',
+      technologies: 'Html 5, CSS e JavaScript',
+      url : 'https://gardenathome.netlify.app',
+      link_repo: [
+        {
+          url: 'https://github.com/PauloRicardoDev/landingPageGardenAtHome.git'
+        }
+      ],
+      notas : ''
+    },
+    {
+      src: 'assets/projects-imgs/project-appImage.png',
+      name: 'Projeto App Lite Image',
+      description: 'Projeto de galaria digital para gestão e armazenamento de imagens',
+      technologies: 'Java, TypeScript, React, SCSS, PostgresSQL, SpringBoot',
+      url : '',
+      link_repo: [
+        {
+          url : 'https://github.com/PauloRicardoDev/front-image-lite.git'
+        },
+        {
+          url : 'https://github.com/PauloRicardoDev/api-image-lite.git'
+        }
+      ],
+      notas : ''
+    },
+  ]
+
   // expandedIndex = 0;
   isAboutMe: boolean = false;
   isExp: boolean = false;
@@ -413,4 +446,7 @@ export class MenuComponent {
     }
   }
 
+  redirectLink(url: any) {
+    window.open(url, "_blank", "noopener,noreferrer");
+  }
 }

@@ -336,11 +336,40 @@
     <h1 class="btn-back__title"> | {{itemMenu.projects.title}}</h1>
   </div>
   <section class="projects">
-    <ul style="color: #FFFFFF">
-      <li>
-        ssssssssssssssss
-      </li>
-    </ul>
+    <div class="projects__presentation">
+      <h1 class="projects__presentation-title">Aqui estão alguns projetos que fiz recentimente</h1>
+      <p class="projects__presentation-subtitle">fique a vontade pra explorar</p>
+    </div>
+
+    <section class="projects__containerCards">
+      @for (item of projectsCards; track item){
+
+          <div class="projects__card">
+            <img class="projects__card-img" src="{{item.src}}">
+            <h1 class="projects__card-name">{{item.name}}</h1>
+            <p class="projects__card-description">{{item.description}}</p>
+            @if(item.url != ''){
+              <button class="projects__card-button" (click)="redirectLink(item.url)">
+                <span class="material-symbols-outlined">link</span>
+                <p>vizualizar</p>
+              </button>
+            }
+
+            @for (itens of item.link_repo; track itens){
+              <button (click)="redirectLink(itens.url)" class="projects__card-buttonRepo">
+                <span class="material-symbols-outlined">folder_data</span>
+                <p>respositorio</p>
+              </button>
+            }
+
+            <section class="projects__cardTecnologies">
+              <h3 class="projects__cardTecnologies-title">Tecnologias:</h3>
+              <p class="projects__cardTecnologies-subtitle">{{item.technologies}}</p>
+            </section>
+
+          </div>
+      }
+    </section>
   </section>
 </section>
 

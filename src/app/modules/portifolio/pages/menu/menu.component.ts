@@ -402,7 +402,7 @@ export class MenuComponent {
       name: 'Projeto Meus Cpntatos App',
       description: 'Projeto de gestão e armazenamento de contatos',
       technologies: 'Firebase, TypeScript, Angular, SCSS',
-      url : '',
+      url : 'https://app-contact-list.vercel.app/login',
       link_repo: [
         {
           url : 'https://github.com/PauloRicardoDev/AppContactList.git'

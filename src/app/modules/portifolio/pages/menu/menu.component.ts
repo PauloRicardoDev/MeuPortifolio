@@ -384,7 +384,7 @@ export class MenuComponent {
     {
       src: 'assets/projects-imgs/project-appImage.png',
       name: 'Projeto App Lite Image',
-      description: 'Projeto de galaria digital para gestão e armazenamento de imagens',
+      description: 'Projeto de galeria digital para gestão e armazenamento de imagens',
       technologies: 'Java, TypeScript, React, SCSS, PostgresSQL, SpringBoot',
       url : '',
       link_repo: [
@@ -393,6 +393,19 @@ export class MenuComponent {
         },
         {
           url : 'https://github.com/PauloRicardoDev/api-image-lite.git'
+        }
+      ],
+      notas : ''
+    },
+    {
+      src: 'assets/projects-imgs/project-contact-list.png',
+      name: 'Projeto Meus Cpntatos App',
+      description: 'Projeto de gestão e armazenamento de contatos',
+      technologies: 'Firebase, TypeScript, Angular, SCSS',
+      url : '',
+      link_repo: [
+        {
+          url : 'https://github.com/PauloRicardoDev/AppContactList.git'
         }
       ],
       notas : ''

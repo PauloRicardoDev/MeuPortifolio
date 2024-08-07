@@ -76,7 +76,7 @@
 @media (max-width: 500px){
   .container-main {
     background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0.47)),
-    url("/assets/banner-presentation-responsive.png") no-repeat center center fixed;
+    url("/assets/banner-presentation-responsive.png") no-repeat;
     background-size: cover;
     height: 120vh;
 

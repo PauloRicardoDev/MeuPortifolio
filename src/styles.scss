@@ -132,8 +132,11 @@ body { background: $background-quaternary }
 //graduation
 .graduation{
   &__title{
-    color: $text-highlight;
+    background: linear-gradient(to right, $text-highlight, #6c0069);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin: 1rem 0;
+    font-size: 2rem;
   }
 
   &__list{

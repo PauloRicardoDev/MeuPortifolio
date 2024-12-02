@@ -1,3 +1,73 @@
 <main class="container__aboutme">
-  <span>Sobre mim</span>
+  <section class="container__aboutme-content">
+    <h1 class="container__aboutme-content-title">Sobre mim</h1>
+  </section>
+  <section class="profile">
+    <aside class="profile__imgAndGraduation">
+
+      <section class="profile__imgAndGraduation-infos">
+        <img class="profile__imgAndGraduation-infos-img" src="/assets/svgs/profile.svg" alt="Perfil">
+        <div class="profile__imgAndGraduation-infos-myinfos">
+          <ul class="profile__imgAndGraduation-infos-myinfos-list">
+            <li class="profile__imgAndGraduation-infos-myinfos-list-item">
+              <h4 class="profile__imgAndGraduation-infos-myinfos-list-item-title">Nome</h4>
+              <p class="profile__imgAndGraduation-infos-myinfos-list-item-text">{{myInformations.name}}</p>
+            </li>
+            <li class="profile__imgAndGraduation-infos-myinfos-list-item">
+              <h4 class="profile__imgAndGraduation-infos-myinfos-list-item-title">Age</h4>
+              <p class="profile__imgAndGraduation-infos-myinfos-list-item-text">{{myInformations.age}}</p>
+            </li>
+            <li class="profile__imgAndGraduation-infos-myinfos-list-item">
+              <h4 class="profile__imgAndGraduation-infos-myinfos-list-item-title">Email</h4>
+              <p class="profile__imgAndGraduation-infos-myinfos-list-item-text">{{myInformations.email}}</p>
+            </li>
+            <li class="profile__imgAndGraduation-infos-myinfos-list-item">
+              <h4 class="profile__imgAndGraduation-infos-myinfos-list-item-title">Nacionalidade</h4>
+              <p class="profile__imgAndGraduation-infos-myinfos-list-item-text">{{myInformations.nationality}}</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="profile__imgAndGraduation-philosophy">
+        <div class="profile__imgAndGraduation-philosophy-content">
+          <i class="bi bi-lightbulb-fill profile__imgAndGraduation-philosophy-content-icon"></i>
+          <h3 class="profile__imgAndGraduation-philosophy-content-title">Minha Filosofia como desenvolvedor</h3>
+        </div>
+        <p class="profile__imgAndGraduation-philosophy-text">{{aboutMe.textMyPhilosophy}}</p>
+      </div>
+    </aside>
+
+    <aside class="profile__infos">
+      <div class="profile__infos-greeting">
+        <h2 class="profile__welcome">Olá, seja bem vindo(a)!</h2>
+        <article class="profile__description">
+          <p class="profile__text">{{aboutMe.textPresentation}}</p>
+        </article>
+      </div>
+    </aside>
+
+    <div>
+      <h2 class="graduation__title">Graduação</h2>
+      <ul class="graduation__list">
+        <li class="graduation__list-item">
+          <h4 style="font-size: .7rem" class="graduation__list-item-title">Instituição</h4>
+          <p style="font-size: .7rem" class="graduation__list-item-text">{{courseName.instituicao}}</p>
+        </li>
+        <li class="graduation__list-item">
+          <h4 style="font-size: .7rem" class="graduation__list-item-title">Curso</h4>
+          <p style="font-size: .7rem" class="graduation__list-item-text">{{courseName.name}}</p>
+        </li>
+        <li class="graduation__list-item">
+          <h4 style="font-size: .7rem" class="graduation__list-item-title">Status</h4>
+          <p style="font-size: .7rem" class="graduation__list-item-text">{{courseName.status}}</p>
+        </li>
+        <li class="graduation__list-item">
+          <h4 style="font-size: .7rem" class="graduation__list-item-title">Previsão de formação</h4>
+          <p style="font-size: .7rem" class="graduation__list-item-text">{{courseName.forecast}}</p>
+        </li>
+      </ul>
+    </div>
+
+  </section>
 </main>

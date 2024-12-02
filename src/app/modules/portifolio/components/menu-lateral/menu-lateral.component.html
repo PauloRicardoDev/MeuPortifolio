@@ -1,0 +1,23 @@
+<main class="container__menu">
+  <aside class="container__menu-buttons">
+    <img class="container__menu-buttons-img" src="/assets/logo.webp">
+
+    <i style="color:#6300b7;"  class="bi bi-dash-lg"></i>
+
+    <button (click)="linkLinkedin()" class="container__menu-buttons-button" aria-label="LinkedIn" title="Ir para LinkedIn">
+      <i class="bi bi-linkedin"></i>
+      <!--      <p>LinkedIn</p> &lt;!&ndash; Correção no texto &ndash;&gt;-->
+    </button>
+    <button (click)="linkWhatsApp()" class="container__menu-buttons-button" aria-label="WhatsApp" title="Ir para WhatsApp">
+      <i class="bi bi-whatsapp"></i>
+      <!--      <p>WhatsApp</p>-->
+    </button>
+    <button (click)="downloadPDF()" [disabled]="isLoading" class="container__menu-buttons-button"
+            title="{{ isLoading ? 'Baixando...' : 'Baixar CV' }}">
+      <i class="bi bi-file-earmark-arrow-down-fill"></i>
+      <!--      <p>{{ isLoading ? 'Baixando...' : 'Baixar CV' }}</p>-->
+    </button>
+
+    <i style="color:#6300b7;" class="bi bi-dash-lg"></i>
+  </aside>
+</main>

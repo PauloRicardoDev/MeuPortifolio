@@ -35,6 +35,7 @@ $project-portifolio-theme: mat.define-light-theme((
 // that you are using.
 @include mat.all-component-themes($project-portifolio-theme);
 
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
 @import 'app/modules/portifolio/colors';
 
@@ -49,7 +50,7 @@ $project-portifolio-theme: mat.define-light-theme((
 
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { background: $background-quaternary }
 
 //accordion
 .example-accordion {

@@ -1,25 +1,22 @@
 @import '../../colors';
 .container__aboutme{
-  margin: 0;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
+  background: linear-gradient(to bottom, rgba(30, 31, 34, 0), rgba(0, 0, 0, 0)),
+  url("/assets/banner-aboutme.svg") no-repeat center center;
+  background-size: cover;
   color: $text-secondary;
+  padding: 3rem 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 
-  &-content{
-    margin: 2rem 6rem;
-
-    &-title{
-      background: linear-gradient(to right, $text-highlight, #6c0069);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-size: 2rem;
-    }
+  &-title{
+    background: linear-gradient(to right, $text-highlight, #6c0069);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2rem;
   }
 
   &-profile{
-    padding: 0 6rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -82,7 +79,7 @@
           display: flex;
           align-items: flex-start;
           gap: .5rem;
-          width: 100%;
+
         }
 
         &-text{

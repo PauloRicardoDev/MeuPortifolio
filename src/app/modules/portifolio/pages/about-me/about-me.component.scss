@@ -1,5 +1,4 @@
 @import '../../colors';
-
 .container__aboutme{
   margin: 0;
   display: flex;
@@ -18,173 +17,40 @@
       font-size: 2rem;
     }
   }
-}
-//container (About Me)
-.profile{
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  align-items: flex-start;
-  margin: 0 6rem;
-  height: 100%;
 
-  &__imgAndGraduation{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
+  &-profile{
+    padding: 0 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     gap: 2rem;
 
-    &-infos{
-      display: flex;
-      align-items: center;
-      border: 2px solid #1c1c1c;
-      border-radius: 50px 50px 0 50px;
-      height: 100%;
-
-      &-img{
-        width: 250px;
-      }
-
-      &-myinfos{
-        padding:2rem 2rem 2rem 0;
-        &-list{
-          display: flex;
-          gap: .5rem;
-          flex-direction: column;
-
-          &-item{
-            display: flex;
-            gap: .3rem;
-            flex-direction: column;
-
-            &-title{
-              font-size: .95rem;
-              color: $background-secondary;
-            }
-
-            &-text{
-              font-size: .8rem;
-              color: $text-muted;
-            }
-          }
-        }
-      }
-    }
-
-
-    &-philosophy{
-      background: #330061;
-      padding: 2rem;
-      border-radius: 0 50px 50px 50px;
-      font-size: .7rem;
-
-      &-content{
-        display: flex;
-        gap: .5rem;
-        align-items: center;
-
-        &-icon{
-          font-size: 1.5rem;
-        }
-
-        &-title{
-          color: $text-secondary;
-        }
-
-      }
-
-
-      &-text{
-        color: $text-secondary;
-        text-align: justify;
-        text-indent: 1rem;
-        line-height: 2rem;
-        padding: 1rem;
-      }
-    }
-
-  }
-
-  &__infos{
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-    gap: 2rem;
-
-    &-greeting{
-      font-size: .7rem;
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      width: 750px;
-    }
-  }
-
-  &__welcome{
-    font-size: 1.5rem;
-    color: $text-secondary;
-  }
-
-  &__description{
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-    gap: 1rem;
-    text-align: justify;
-  }
-
-  &__text{
-    text-indent: 2rem;
-    color: $text-muted;
-    line-height: 2rem;
-  }
-
-
-  &__toHelpYou{
-    &-title{
-      padding: 1rem 0 2rem 0;
-      color: $text-muted;
-    }
-  }
-}
-
-@media (max-width: 1024px) {
-  .profile{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    align-items: flex-start;
-    margin: 0 6rem;
-    height: 100%;
-
-    &__imgAndGraduation{
+    &-imgAndGraduation{
       display: grid;
       grid-template-columns: 1fr 1fr;
-      align-items: center;
       gap: 2rem;
 
       &-infos{
         display: flex;
         align-items: center;
+        justify-content: flex-start;
         border: 2px solid #1c1c1c;
-        flex-direction: column;
-        border-radius: 50px 50px 0 50px;
-        height: 100%;
+        border-radius: 50px 0 50px 50px;
 
         &-img{
           width: 250px;
+          padding: 1rem;
         }
 
         &-myinfos{
-          padding:2rem 2rem 2rem 0;
           &-list{
             display: flex;
             gap: .5rem;
             flex-direction: column;
-
+            padding-right: 2rem;
             &-item{
               display: flex;
-              gap: .3rem;
+              gap: .25rem;
               flex-direction: column;
 
               &-title{
@@ -201,237 +67,151 @@
         }
       }
 
-
       &-philosophy{
-        background: #330061;
-        padding: 0rem;
-        border-radius: 0 50px 50px 50px;
-        font-size: .7rem;
-        height: 100%;
+        background: #5e17eb;
+        border-radius: 50px 50px 50px 0px;
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1rem;
+
 
         &-content{
           display: flex;
+          align-items: flex-start;
           gap: .5rem;
-          align-items: center;
-          padding: 2rem 2rem  0 2rem;
-
-          &-icon{
-            font-size: 1.5rem;
-          }
-
-          &-title{
-            color: $text-secondary;
-          }
-
+          width: 100%;
         }
-
 
         &-text{
-          color: $text-secondary;
           text-align: justify;
-          text-indent: 1rem;
-          line-height: 2rem;
-          padding: 2rem;
+          text-indent: 1.5rem;
+          line-height: 1.5rem;
+          font-size: .8rem;
         }
       }
-
     }
 
-    &__infos{
-      display: grid;
-      grid-template-columns: 1fr;
-      align-items: center;
-      gap: 2rem;
-
+    &-infos{
       &-greeting{
-        font-size: .7rem;
         display: flex;
         flex-direction: column;
-        gap: 2rem;
-        width: 750px;
+        gap: 1rem;
+
+        &-welcome{
+          font-size: 1.2rem;
+        }
+
+        &-description{
+          &-text{
+            font-size: .8rem;
+            line-height: 1.5rem;
+            color: $text-muted;
+            text-indent: 1.5rem;
+            text-align: justify;
+          }
+        }
       }
     }
+  }
 
-    &__welcome{
-      font-size: 1.5rem;
-      color: $text-secondary;
-    }
+}
+@media (max-width: 1024px) {
+  .container__aboutme{
+    &-profile{
+      &-imgAndGraduation{
+        &-infos{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          border: 2px solid #1c1c1c;
+          border-radius: 50px 0 50px 50px;
 
-    &__description{
-      display: grid;
-      grid-template-columns: 1fr;
-      align-items: center;
-      gap: 1rem;
-      text-align: justify;
-    }
+          &-myinfos{
+            &-list{
+              display: flex;
+              gap: .5rem;
+              flex-direction: column;
+              padding: 2rem;
+            }
+          }
+        }
+        &-philosophy{
+          background: #5e17eb;
+          border-radius: 50px 50px 50px 0px;
+          padding: 2rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          gap: 1rem;
 
-    &__text{
-      text-indent: 2rem;
-      color: $text-muted;
-      line-height: 2rem;
-    }
 
+          &-content{
+            display: flex;
+            align-items: flex-start;
+            gap: .5rem;
+            width: 100%;
+          }
 
-    &__toHelpYou{
-      &-title{
-        padding: 1rem 0 2rem 0;
-        color: $text-muted;
+          &-text{
+            text-align: justify;
+            text-indent: 1.5rem;
+            line-height: 1.5rem;
+            font-size: .8rem;
+          }
+        }
       }
     }
   }
 }
-
-@media (max-width: 965px) {
+@media (max-width: 800px) {
   .container__aboutme{
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: $text-secondary;
+    &-profile{
+      &-imgAndGraduation{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
 
-    &-content{
-      margin: 2rem 3rem;
+        &-infos{
+          flex-direction: row;
 
-      &-title{
-        background: linear-gradient(to right, $text-highlight, #6c0069);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-size: 2rem;
-      }
-    }
-  }
+          &-img{
+            width: 200px;
+          }
 
-  .profile{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    align-items: flex-start;
-    margin: 0 5rem;
-    height: 100%;
-
-    &__imgAndGraduation{
-      display: grid;
-      grid-template-columns: 1fr;
-      align-items: center;
-      gap: 2rem;
-
-      &-infos{
-        display: flex;
-        align-items: center;
-        border: 2px solid #1c1c1c;
-        flex-direction: row;
-        border-radius: 50px 50px 0 50px;
-        height: 100%;
-
-        &-img{
-          width: 250px;
-          padding: 1rem;
-        }
-
-        &-myinfos{
-          padding:2rem 2rem 2rem 0;
-          &-list{
-            display: flex;
-            gap: .5rem;
-            flex-direction: column;
-
-            &-item{
+          &-myinfos{
+            &-list{
               display: flex;
-              gap: .3rem;
+              gap: .5rem;
               flex-direction: column;
+              padding:0;
+              &-item{
+                display: flex;
+                gap: .25rem;
+                flex-direction: column;
 
-              &-title{
-                font-size: .95rem;
-                color: $background-secondary;
-              }
+                &-title{
+                  font-size: .95rem;
+                  color: $background-secondary;
+                }
 
-              &-text{
-                font-size: .6rem;
-                color: $text-muted;
+                &-text{
+                  font-size: .65rem;
+                  color: $text-muted;
+                }
               }
             }
           }
         }
-      }
 
-
-      &-philosophy{
-        background: #330061;
-        padding: 0rem;
-        border-radius: 0 50px 50px 50px;
-        font-size: .6rem;
-        height: 100%;
-
-        &-content{
-          display: flex;
-          gap: .5rem;
-          align-items: center;
-          padding: 2rem 2rem  0 2rem;
-
-          &-icon{
-            font-size: 1.5rem;
-          }
-
-          &-title{
-            color: $text-secondary;
-          }
-
-        }
-
-
-        &-text{
-          color: $text-secondary;
-          text-align: justify;
-          text-indent: 1rem;
-          line-height: 2rem;
-          padding: 2rem;
-        }
-      }
-
-    }
-
-    &__infos{
-      display: grid;
-      grid-template-columns: 1fr;
-      align-items: center;
-      gap: 2rem;
-
-      &-greeting{
-        font-size: .6rem;
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        width: 100%;
       }
     }
   }
 }
-
-@media (max-width: 600px) {
-  .container__aboutme{
-    margin: 0;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-    color: $text-secondary;
-
-    &-content{
-      margin: 2rem 5rem;
-    }
-  }
-
-  .profile{
-    &__imgAndGraduation{
-      &-infos{
-        display: flex;
-        align-items: center;
-        border: 2px solid #1c1c1c;
-        flex-direction: column;
-        border-radius: 50px 50px 0 50px;
-        height: 100%;
-      }
-    }
-  }
+@media (max-width: 675px) {
+  @import "about-me-responsive.component";
 }

@@ -27,20 +27,20 @@ export class HomeComponent implements OnInit {
 
   constructor(private router: Router) {}
 
-  ngOnInit() {
-    // Inicializa as animações do AOS
+  ngOnInit(): void {
+    // Inicializa o AOS com configurações para animação de entrada e saída
     AOS.init({
-      duration: 3000,  // A duração da animação em milissegundos
-      once: false,     // As animações irão ocorrer sempre que o elemento entrar na tela
+      duration: 700,  // A duração da animação em milissegundos
+      once: false,     // A animação ocorre toda vez que o elemento entra na tela
       easing: 'ease-in-out',  // Tipo de transição da animação
+      // mirror: true,    // Faz com que a animação seja disparada na entrada e na saída
     });
 
-    // Atualiza o AOS quando a página rolar
+    // Atualiza o AOS sempre que a página rolar (detecta entrada e saída)
     window.addEventListener('scroll', () => {
-      AOS.refresh();
+      AOS.refresh(); // Atualiza as animações ao rolar a página
     });
   }
-
 
   linkLinkedin() {
     window.open("https://www.linkedin.com/in/paulo-ricardo-chagas-99904b244?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", "_blank", "noopener,noreferrer");

@@ -20,6 +20,12 @@
 
     <i style="color:#6300b7;" class="bi bi-dash-lg"></i>
 
+    <button (click)="scrollToSection('presentation')" class="container__menu-buttons-button"
+            title="Ir para o início">
+      <i class="bi bi-caret-up-fill"></i>
+      <!--      <p>{{ isLoading ? 'Baixando...' : 'Baixar CV' }}</p>-->
+    </button>
+
     <button (click)="scrollToSection('about-me')" class="container__menu-buttons-button"
             title="Ir para sobre mim">
       <i class="bi bi-person-circle"></i>
@@ -35,7 +41,7 @@
 
   </aside>
 </main>
-<app-presentation data-aos="zoom-in"/>
+<app-presentation  id="presentation" data-aos="zoom-in"/>
 <app-about-me id="about-me" data-aos="zoom-in"/>
 <app-experience id="exp" data-aos="zoom-in"/>
 <app-menu/>

@@ -1,4 +1,4 @@
-<main class="container__menu">
+<section class="container__menu">
   <aside class="container__menu-buttons">
     <img class="container__menu-buttons-img" loading="lazy"  src="/assets/logo.svg">
 
@@ -25,34 +25,28 @@
       <i class="bi bi-caret-up-fill"></i>
       <!--      <p>{{ isLoading ? 'Baixando...' : 'Baixar CV' }}</p>-->
     </button>
-
     <button (click)="scrollToSection('about-me')" class="container__menu-buttons-button"
             title="Ir para sobre mim">
       <i class="bi bi-person-circle"></i>
       <!--      <p>{{ isLoading ? 'Baixando...' : 'Baixar CV' }}</p>-->
     </button>
-
     <button (click)="scrollToSection('exp')" class="container__menu-buttons-button"
             title="Ir para minhas exp">
       <i class="bi bi-emoji-wink-fill"></i>
       <!--      <p>{{ isLoading ? 'Baixando...' : 'Baixar CV' }}</p>-->
     </button>
-
     <button (click)="scrollToSection('footer')" class="container__menu-buttons-button"
             title="Ir para o final">
       <i class="bi bi-caret-down-fill"></i>
       <!--      <p>{{ isLoading ? 'Baixando...' : 'Baixar CV' }}</p>-->
     </button>
 
-
-
-
   </aside>
-</main>
-<section style="height: auto; display: flex; flex-direction: column">
+</section>
+<main class="container__home">
   <app-presentation  id="presentation" data-aos="fade-up"/>
   <app-about-me id="about-me" data-aos="fade-up"/>
   <app-experience id="exp" data-aos="fade-up"/>
   <app-menu/>
-  <app-footer id="footer" data-aos="fade-up"/>
-</section>
+  <app-footer id="footer"/>
+</main>

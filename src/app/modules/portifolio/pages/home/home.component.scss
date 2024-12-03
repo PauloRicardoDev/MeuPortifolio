@@ -55,6 +55,11 @@
     }
   }
 }
+.container__home{
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
 @media (max-width: 500px) {
   .container__menu{
     //background: $background-quaternary;

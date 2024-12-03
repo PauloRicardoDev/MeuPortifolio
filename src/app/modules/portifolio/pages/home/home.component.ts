@@ -4,6 +4,7 @@ import {PresentationComponent} from "../presentation/presentation.component";
 import {MenuComponent} from "../menu/menu.component";
 import {AboutMeComponent} from "../about-me/about-me.component";
 import {Router} from "@angular/router";
+import {ExperienceComponent} from "../experience/experience.component";
 
 @Component({
   selector: 'app-home',
@@ -13,6 +14,7 @@ import {Router} from "@angular/router";
     PresentationComponent,
     MenuComponent,
     AboutMeComponent,
+    ExperienceComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

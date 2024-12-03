@@ -25,9 +25,18 @@
       <i class="bi bi-person-circle"></i>
       <!--      <p>{{ isLoading ? 'Baixando...' : 'Baixar CV' }}</p>-->
     </button>
+
+    <button (click)="scrollToSection('exp')" class="container__menu-buttons-button"
+            title="Ir para sobre mim">
+      <i class="bi bi-emoji-wink-fill"></i>
+      <!--      <p>{{ isLoading ? 'Baixando...' : 'Baixar CV' }}</p>-->
+    </button>
+
+
   </aside>
 </main>
 <app-presentation/>
 <app-about-me id="about-me"/>
+<app-experience id="exp"/>
 <app-menu/>
 <app-footer/>

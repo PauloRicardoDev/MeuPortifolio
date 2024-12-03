@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     // Inicializa as animações do AOS
     AOS.init({
-      duration: 1200,  // A duração da animação em milissegundos
+      duration: 3000,  // A duração da animação em milissegundos
       once: false,     // As animações irão ocorrer sempre que o elemento entrar na tela
       easing: 'ease-in-out',  // Tipo de transição da animação
     });

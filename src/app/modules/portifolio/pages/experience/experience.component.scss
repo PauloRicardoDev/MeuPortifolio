@@ -35,7 +35,7 @@
       &:first-child{
         background:none;
         border-radius: 50px 0 50px 50px;
-        border: 2px solid #5e17eb;
+        border: 2px solid $background-secondary;
       }
 
       &-title{
@@ -101,5 +101,14 @@
     flex-direction: column;
     gap: 2rem;
     height: auto;
+
+
+    &-title{
+      background: linear-gradient(to right, $text-highlight, #6c0069);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 1.5rem;
+    }
+
   }
 }

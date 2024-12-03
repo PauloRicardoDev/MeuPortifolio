@@ -1,10 +1,13 @@
-import { Component } from '@angular/core';
-import {FooterComponent} from "../../components/footer/footer.component";
-import {PresentationComponent} from "../presentation/presentation.component";
-import {MenuComponent} from "../menu/menu.component";
-import {AboutMeComponent} from "../about-me/about-me.component";
-import {Router} from "@angular/router";
-import {ExperienceComponent} from "../experience/experience.component";
+import { Component, OnInit } from '@angular/core';
+import { FooterComponent } from "../../components/footer/footer.component";
+import { PresentationComponent } from "../presentation/presentation.component";
+import { MenuComponent } from "../menu/menu.component";
+import { AboutMeComponent } from "../about-me/about-me.component";
+import { Router } from "@angular/router";
+import { ExperienceComponent } from "../experience/experience.component";
+// @ts-ignore
+import * as AOS from 'aos';  // Tipagem implicitamente como "any"
+import 'aos/dist/aos.css';
 
 @Component({
   selector: 'app-home',
@@ -17,15 +20,27 @@ import {ExperienceComponent} from "../experience/experience.component";
     ExperienceComponent,
   ],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   isLoading: boolean = false;
 
-  constructor(
-    private router: Router
-  ) {
+  constructor(private router: Router) {}
+
+  ngOnInit() {
+    // Inicializa as animações do AOS
+    AOS.init({
+      duration: 1200,  // A duração da animação em milissegundos
+      once: false,     // As animações irão ocorrer sempre que o elemento entrar na tela
+      easing: 'ease-in-out',  // Tipo de transição da animação
+    });
+
+    // Atualiza o AOS quando a página rolar
+    window.addEventListener('scroll', () => {
+      AOS.refresh();
+    });
   }
+
 
   linkLinkedin() {
     window.open("https://www.linkedin.com/in/paulo-ricardo-chagas-99904b244?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", "_blank", "noopener,noreferrer");
@@ -58,5 +73,4 @@ export class HomeComponent {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
-
 }

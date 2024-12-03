@@ -1,6 +1,6 @@
 <main class="container__menu">
   <aside class="container__menu-buttons">
-    <img class="container__menu-buttons-img" loading="lazy"  src="/assets/logo.webp">
+    <img class="container__menu-buttons-img" loading="lazy"  src="/assets/logo.svg">
 
     <i style="color:#6300b7;"  class="bi bi-dash-lg"></i>
 
@@ -38,6 +38,14 @@
       <!--      <p>{{ isLoading ? 'Baixando...' : 'Baixar CV' }}</p>-->
     </button>
 
+    <button (click)="scrollToSection('footer')" class="container__menu-buttons-button"
+            title="Ir para o final">
+      <i class="bi bi-caret-down-fill"></i>
+      <!--      <p>{{ isLoading ? 'Baixando...' : 'Baixar CV' }}</p>-->
+    </button>
+
+
+
 
   </aside>
 </main>
@@ -46,5 +54,5 @@
   <app-about-me id="about-me" data-aos="fade-up"/>
   <app-experience id="exp" data-aos="fade-up"/>
   <app-menu/>
-  <app-footer/>
+  <app-footer id="footer" data-aos="fade-up"/>
 </section>

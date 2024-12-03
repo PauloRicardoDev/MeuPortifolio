@@ -1,3 +1,55 @@
 <main class="container__exp">
-  <h1 class="container__exp-title">Experiência</h1>
+  <h1 class="container__exp-title">Experiência formal</h1>
+
+  <section class="container__exp-content">
+    <aside class="container__exp-content-exp">
+      <h2 class="container__exp-content-exp-title">Última</h2>
+      <img class="container__exp-content-exp-img" src="/assets/svgs/brasao-universidade.svg" alt="logo última empresa">
+      <ul class="container__exp-content-exp-list">
+        <li class="container__exp-content-exp-list-item">
+          <h3 class="container__exp-content-exp-list-item-title">Instituição</h3>
+          <p class="container__exp-content-exp-list-item-msg">{{lastExperience.company}}</p>
+        </li>
+        <li class="container__exp-content-exp-list-item">
+          <h3 class="container__exp-content-exp-list-item-title">Duração</h3>
+          <p class="container__exp-content-exp-list-item-msg">{{lastExperience.duration}}</p>
+        </li>
+        <li class="container__exp-content-exp-list-item">
+          <h3 class="container__exp-content-exp-list-item-title">Cargo</h3>
+          <p class="container__exp-content-exp-list-item-msg">{{lastExperience.office}}</p>
+        </li>
+        <li class="container__exp-content-exp-list-item">
+          <h3 class="container__exp-content-exp-list-item-title">Atividades</h3>
+          <p class="container__exp-content-exp-list-item-msg">{{lastExperience.activities}}</p>
+        </li>
+      </ul>
+    </aside>
+    <aside class="container__exp-content-exp">
+      <img class="container__exp-content-exp-img" src="/assets/svgs/logo-empresa.svg" alt="logo última empresa">
+      <ul class="container__exp-content-exp-list">
+        <li class="container__exp-content-exp-list-item">
+          <h3 class="container__exp-content-exp-list-item-title">Empresa</h3>
+          <p class="container__exp-content-exp-list-item-msg">{{experience.company}}</p>
+        </li>
+        <li class="container__exp-content-exp-list-item">
+          <h3 class="container__exp-content-exp-list-item-title">Duração</h3>
+          <p class="container__exp-content-exp-list-item-msg">{{experience.duration}}</p>
+        </li>
+        <li class="container__exp-content-exp-list-item">
+          <h3 class="container__exp-content-exp-list-item-title">Cargo</h3>
+          <p class="container__exp-content-exp-list-item-msg">{{experience.office}}</p>
+        </li>
+        <li class="container__exp-content-exp-list-item">
+          <h3 class="container__exp-content-exp-list-item-title">Atividades</h3>
+          <p class="container__exp-content-exp-list-item-msg">{{experience.activities}}</p>
+        </li>
+        <li class="container__exp-content-exp-list-item">
+          <h3 class="container__exp-content-exp-list-item-title">Projetos</h3>
+          @for (itens of experience.projects; track itens){
+            <p class="container__exp-content-exp-list-item-msg">{{itens.project}}</p>
+          }
+        </li>
+      </ul>
+    </aside>
+  </section>
 </main>

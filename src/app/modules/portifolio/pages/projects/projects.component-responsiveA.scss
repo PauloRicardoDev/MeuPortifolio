@@ -1,0 +1,14 @@
+@import '../../colors';
+.container__projects{
+  &-content{
+    &-containerCards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+  }
+}
+
+
+
+

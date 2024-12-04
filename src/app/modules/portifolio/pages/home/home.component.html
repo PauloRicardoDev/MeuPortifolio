@@ -40,6 +40,13 @@
       <i class="bi bi-emoji-sunglasses-fill"></i>
       <!--      <p>{{ isLoading ? 'Baixando...' : 'Baixar CV' }}</p>-->
     </button>
+
+    <button (click)="scrollToSection('projects')" class="container__menu-buttons-button"
+            title="Ir para projetos">
+      <i class="bi bi-file-earmark-code-fill"></i>
+      <!--      <p>{{ isLoading ? 'Baixando...' : 'Baixar CV' }}</p>-->
+    </button>
+
     <button (click)="scrollToSection('footer')" class="container__menu-buttons-button"
             title="Ir para o final">
       <i class="bi bi-caret-down-fill"></i>
@@ -53,6 +60,7 @@
   <app-about-me id="about-me" data-aos="fade-up"/>
   <app-experience id="exp" data-aos="fade-up"/>
   <app-skills id="skills" data-aos="fade-up"/>
+  <app-projects id="projects" data-aos="fade-up"/>
   <app-menu/>
   <app-footer id="footer"/>
 </main>

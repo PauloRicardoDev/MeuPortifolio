@@ -1,0 +1,41 @@
+<main class="container__projects">
+
+  <section class="container__projects-greeting">
+    <h1 class="container__projects-greeting-title">Projetos</h1>
+    <p class="container__projects-greeting-text">Aqui estão alguns projetos que fiz recentimente</p>
+    <span class="container__projects-greeting-msg">fique a vontade pra explorar</span>
+  </section>
+
+  <section class="container__projects-content" >
+
+    <section class="container__projects-content-containerCards">
+      @for (item of projectsCards; track item){
+
+        <div class="container__projects-content-containerCards-card">
+          <img class="container__projects-content-containerCards-card-img" src="{{item.src}}">
+          <h1 class="container__projects-content-containerCards-card-name">{{item.name}}</h1>
+          <p class="container__projects-content-containerCards-card-description">{{item.description}}</p>
+          @if(item.url != ''){
+            <button class="container__projects-content-containerCards-card-button" (click)="redirectLink(item.url)">
+              <span class="material-symbols-outlined">link</span>
+              <p>vizualizar</p>
+            </button>
+          }
+
+          @for (itens of item.link_repo; track itens){
+            <button (click)="redirectLink(itens.url)" class="container__projects-content-containerCards-card-buttonRepo">
+              <span class="material-symbols-outlined">folder_data</span>
+              <p>respositorio</p>
+            </button>
+          }
+
+          <section class="container__projects-content-containerCards-card-cardTecnologies">
+            <h3 class="container__projects-content-containerCards-card-cardTecnologies-title">Tecnologias:</h3>
+            <p class="container__projects-content-containerCards-card-cardTecnologies-subtitle">{{item.technologies}}</p>
+          </section>
+
+        </div>
+      }
+    </section>
+  </section>
+</main>

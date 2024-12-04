@@ -27,12 +27,17 @@
     </button>
     <button (click)="scrollToSection('about-me')" class="container__menu-buttons-button"
             title="Ir para sobre mim">
-      <i class="bi bi-person-circle"></i>
+      <i class="bi bi-emoji-smile-fill"></i>
       <!--      <p>{{ isLoading ? 'Baixando...' : 'Baixar CV' }}</p>-->
     </button>
     <button (click)="scrollToSection('exp')" class="container__menu-buttons-button"
             title="Ir para minhas exp">
       <i class="bi bi-emoji-wink-fill"></i>
+      <!--      <p>{{ isLoading ? 'Baixando...' : 'Baixar CV' }}</p>-->
+    </button>
+    <button (click)="scrollToSection('skills')" class="container__menu-buttons-button"
+            title="Ir para minhas skills">
+      <i class="bi bi-emoji-sunglasses-fill"></i>
       <!--      <p>{{ isLoading ? 'Baixando...' : 'Baixar CV' }}</p>-->
     </button>
     <button (click)="scrollToSection('footer')" class="container__menu-buttons-button"
@@ -47,7 +52,7 @@
   <app-presentation  id="presentation" data-aos="fade-up"/>
   <app-about-me id="about-me" data-aos="fade-up"/>
   <app-experience id="exp" data-aos="fade-up"/>
-  <app-skills data-aos="fade-up"/>
+  <app-skills id="skills" data-aos="fade-up"/>
   <app-menu/>
   <app-footer id="footer"/>
 </main>

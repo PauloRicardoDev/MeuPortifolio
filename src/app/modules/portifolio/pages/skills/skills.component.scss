@@ -57,6 +57,9 @@
     }
 
     &-softSkills{
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
       &-title{
         color: $text-secondary;
         margin-bottom: 2rem;

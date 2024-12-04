@@ -1,3 +1,37 @@
 <main class="container__courses">
 
+  <section class="container__courses-content">
+    <h1 class="container__courses-content-title">Cursos e Formações</h1>
+    <p></p>
+    <span></span>
+  </section>
+
+  <section class="container__courses-carousel">
+    <div class="container__courses-carousel-content">
+      <div class="container__courses-carousel-content-infos">
+        <!-- Loop de imagens -->
+        @for (itens of separateCourses; track itens){
+          <div class="container__courses-carousel-content-infos-item">
+            <h2 class="container__courses-carousel-content-infos-item-title">{{itens.name}}</h2>
+            @for (itens of itens.children; track itens){
+              <div>
+                <p class="container__courses-carousel-content-infos-item-text">{{itens.name}}</p>
+              </div>
+            }
+          </div>
+        }
+      </div>
+      <!-- Botões de navegação -->
+    </div>
+    <div class="container__courses-carousel-btns">
+      <button class="container__courses-carousel-btns-btn-prev" (click)="move(-1)">
+        <i class="bi bi-caret-left-fill"></i>
+      </button>
+      <button class="container__courses-carousel-btns-btn-next" (click)="move(1)">
+        <i class="bi bi-caret-right-fill"></i>
+      </button>
+    </div>
+  </section>
 </main>
+
+

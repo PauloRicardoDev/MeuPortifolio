@@ -47,6 +47,12 @@
       <!--      <p>{{ isLoading ? 'Baixando...' : 'Baixar CV' }}</p>-->
     </button>
 
+    <button (click)="scrollToSection('courses')" class="container__menu-buttons-button"
+            title="Ir para cursos/form">
+      <i class="bi bi-mortarboard-fill"></i>
+    </button>
+
+
     <button (click)="scrollToSection('footer')" class="container__menu-buttons-button"
             title="Ir para o final">
       <i class="bi bi-caret-down-fill"></i>
@@ -61,7 +67,6 @@
   <app-experience id="exp" data-aos="fade-up"/>
   <app-skills id="skills" data-aos="fade-up"/>
   <app-projects id="projects" data-aos="fade-up"/>
-  <app-courses data-aos="fade-up"/>
-  <app-menu/>
+  <app-courses id="courses" data-aos="fade-up"/>
   <app-footer id="footer"/>
 </main>

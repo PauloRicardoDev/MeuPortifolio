@@ -4,7 +4,7 @@
   url("/assets/banner-courses.webp") no-repeat center center;
   background-size: cover;
   height: 100%;
-  padding: 3rem 6rem;
+  padding: 3rem 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,7 +13,7 @@
 
   &-content{
     &-title{
-      font-size: 2rem;
+      font-size: 1.5rem;
       background: linear-gradient(to right, $text-highlight, #6c0069);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -44,64 +44,21 @@
           &-title{
             color: $text-secondary;
             margin-bottom: 1rem;
+            font-size: .95rem;
           }
 
           &-text{
-            font-size: .85rem;
+            font-size: .7rem;
             margin-bottom: .5rem;
             color: $text-muted;
           }
         }
       }
     }
-
-    &-btns{
-      display: flex;
-      flex-direction: row;
-      gap: 1rem;
-
-      &-btn{
-        &-prev {
-          padding: .5rem .75rem;
-          border: 2px solid $background-secondary;
-          background: none;
-          color: $text-highlight;
-          border-radius: 50px;
-          cursor: pointer;
-          transition: .5s;
-
-          &:hover{
-            transition: .5s;
-            color: $text-secondary;
-            background: $background-secondary;
-          }
-        }
-
-        &-next {
-          padding: .5rem .75rem;
-          border: 2px solid $background-secondary;
-          background: none;
-          color: $text-highlight;
-          border-radius: 50px;
-
-          &:hover{
-            transition: .5s;
-            color: $text-secondary;
-            background: $background-secondary;
-          }
-        }
-      }
-
-    }
   }
-
 }
 
-@media (max-width: 650px) {
-  @import "courses.component-responsiveA";
-}
 
-@media (max-width: 500px) {
-  @import "courses.component-mobile";
-}
+
+
 

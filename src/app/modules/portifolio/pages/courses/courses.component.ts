@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import {CdkAccordion, CdkAccordionItem} from "@angular/cdk/accordion";
+import {NgStyle} from "@angular/common";
 
 @Component({
   selector: 'app-courses',
   standalone: true,
   imports: [
     CdkAccordion,
-    CdkAccordionItem
+    CdkAccordionItem,
+    NgStyle
   ],
   templateUrl: './courses.component.html',
   styleUrl: './courses.component.scss'
@@ -66,11 +68,40 @@ export class CoursesComponent {
     },
 
     {
-      name : 'Sistema Operacinal',
+      name : 'Sistemas Operacinais',
       children: [
         {name: 'Linux Completo para Usuário Comum ou Desenvolvedor - Udemy'},
       ],
     },
 
   ]
+
+  images = [
+    {
+      url: '/assets/logo.svg'
+    },{
+      url: '/assets/logo.svg'
+    },{
+      url: '/assets/logo.svg'
+    },{
+      url: '/assets/logo.svg'
+    },
+  ];
+
+  currentIndex: number = 0;
+
+  move(direction: number) {
+    const totalImages = this.separateCourses.length;
+    this.currentIndex += direction;
+
+    // Garantir que o índice esteja dentro do intervalo
+    if (this.currentIndex < 0) {
+      this.currentIndex = totalImages - 1;
+    } else if (this.currentIndex >= totalImages) {
+      this.currentIndex = 0;
+    }
+
+    const carousel = document.querySelector('.container__courses-carousel-content-infos') as HTMLElement;
+    carousel.style.transform = `translateX(-${this.currentIndex * 100}%)`;
+  }
 }

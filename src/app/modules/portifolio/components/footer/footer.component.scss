@@ -83,5 +83,8 @@
 }
 
 @media (max-width: 700px) {
+  @import "footer.component-responsiveA";
+}
+@media (max-width: 500px) {
   @import "footer.component-mobile";
 }

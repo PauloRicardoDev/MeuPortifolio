@@ -10,6 +10,7 @@ import * as AOS from 'aos';  // Tipagem implicitamente como "any"
 import 'aos/dist/aos.css';
 import {SkillsComponent} from "../skills/skills.component";
 import {ProjectsComponent} from "../projects/projects.component";
+import {CoursesComponent} from "../courses/courses.component";
 
 @Component({
   selector: 'app-home',
@@ -22,6 +23,7 @@ import {ProjectsComponent} from "../projects/projects.component";
     ExperienceComponent,
     SkillsComponent,
     ProjectsComponent,
+    CoursesComponent,
   ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']

@@ -16,7 +16,7 @@ export class ProjectsComponent {
       name: 'Projeto Garden At Home',
       description: 'projeto landing page sobre cactos e suculentas',
       technologies: 'Html 5, CSS e JavaScript',
-      url : 'https://gardenathome.netlify.app',
+      url : 'https://my-garden-at-home.netlify.app/',
       link_repo: [
         {
           url: 'https://github.com/PauloRicardoDev/landingPageGardenAtHome.git'

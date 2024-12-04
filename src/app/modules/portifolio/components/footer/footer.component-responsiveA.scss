@@ -1,0 +1,88 @@
+@import '../../colors';
+
+.container-footer{
+  padding: 4rem 4rem;
+  color: $secondary-color;
+  border-top: 1px solid #1f1f1f;
+  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  font-size: .8rem;
+  gap: 1rem;
+
+  &-copyAndContacts{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: .5rem;
+
+    flex-direction: column;
+    width: 100%;
+
+    &-copy{
+      display: flex;
+      align-items: center;
+      justify-content:center;
+      gap: .25rem;
+    }
+
+
+    &-contacts{
+      &-content{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .5rem;
+
+        &-title{
+          color: $text-highlight;
+        }
+
+        &-list{
+          display: flex;
+          justify-content: space-evenly;
+          gap: 1rem;
+
+          &-btn{
+            display: flex;
+            align-items: center;
+            justify-content:center;
+            gap: .25rem;
+            background: none;
+            color: $secondary-color;
+            font-size: .7rem;
+            cursor: pointer;
+            transition: .5s;
+
+            &:hover{
+              transition: .5s;
+              color: $text-muted;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-reference{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: .5rem;
+
+    &-title{
+      color: $text-highlight;
+      font-size: .7rem;
+    }
+
+    &-msg{
+      font-size: .7rem;
+    }
+  }
+}
+
+

@@ -1,6 +1,35 @@
 <footer class="container-footer">
-  <span  class="container-footer__title">Inspire-se</span>
-  <section class="container-footer__item">
-    <span>"First, solve the problem. Then, write the code." – John Johnson</span>
+  <section class="container-footer-copyAndContacts">
+    <aside class="container-footer-copyAndContacts-copy">
+      <i class="bi bi-c-circle"></i>
+      Todos direitos reservados
+    </aside>
+
+    <aside class="container-footer-copyAndContacts-contacts">
+      <div class="container-footer-copyAndContacts-contacts-content">
+        <span class="container-footer-copyAndContacts-contacts-content-title">Contatos</span>
+        <ul class="container-footer-copyAndContacts-contacts-content-list">
+          <li>
+            <button (click)="linkLinkedin()" class="container-footer-copyAndContacts-contacts-content-list-btn">
+              <i class="bi bi-linkedin"></i>
+              <span> Meu LinkedIn</span>
+            </button>
+          </li>
+          <li>
+            <button (click)="linkWhatsApp()" class="container-footer-copyAndContacts-contacts-content-list-btn">
+              <i class="bi bi-whatsapp"></i>
+              <span>Meu WhatsApp</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </aside>
+  </section>
+
+  <div class="line"></div>
+
+  <section class="container-footer-reference">
+    <span class="container-footer-reference-title">Inspire-se</span>
+    <p class="container-footer-reference-msg">"First, solve the problem. Then, write the code." – John Johnson</p>
   </section>
 </footer>

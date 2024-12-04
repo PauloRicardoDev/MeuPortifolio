@@ -52,6 +52,10 @@ $project-portifolio-theme: mat.define-light-theme((
 html, body { height: 100%; }
 body { background: $background-quaternary }
 
+.mdc-linear-progress__bar-inner {
+  border-color: $background-secondary !important;
+}
+
 //accordion
 .example-accordion {
   display: block;
@@ -77,6 +81,7 @@ body { background: $background-quaternary }
 .example-accordion-item-header{
   color: $text-highlight;
   padding: 16px;
+  font-size: .85rem;
 }
 .example-accordion-item-body {
   padding: 16px;
@@ -84,13 +89,15 @@ body { background: $background-quaternary }
   text-align: justify;
   text-indent: 1rem;
   line-height: 2rem;
+  font-size: .8rem;
+  color: $text-muted;
 }
 .example-accordion-item-header:hover {
   cursor: pointer;
   //background-color: $background-secondary;
   background-image: linear-gradient(90deg, $background-secondary 0%, rgba(0, 0, 0, 0.11) 100%);
   transition: 1s;
-  color: $text-primary;
+  color: $text-secondary;
 }
 .example-accordion-item:first-child {
   border-top-left-radius: 4px;
@@ -164,7 +171,7 @@ body { background: $background-quaternary }
   }
   &__text{
     font-size:.8rem;
-    margin:1rem 0;
+    margin-top: 1rem;
     color: $text-muted;
     text-align: justify;
     text-indent: 1rem;
@@ -182,12 +189,29 @@ body { background: $background-quaternary }
 
 @media (max-width: 500px) {
   .example-accordion-item-body {
-    font-size: 0.8em;
     color: #b0b0b0;
+    font-size: .7rem;
   }
   .example-accordion-item-header{
     color: $text-highlight;
     padding: 16px;
     font-size: .8rem;
+    font-weight: bolder;
+  }
+
+  .note{
+    margin-top: 1rem;
+    &__title{
+      color: white;
+      font-size: .95rem;
+    }
+    &__text{
+      font-size:.7rem;
+      margin-top: 1rem;
+      color: $text-muted;
+      text-align: justify;
+      text-indent: 1rem;
+      line-height: 2rem;
+    }
   }
 }

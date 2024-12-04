@@ -1,0 +1,76 @@
+<main class="container__skills">
+
+  <h1 class="container__skills-title">Skills</h1>
+  <p  class="container__skills-subtitle">
+    Além de minha paixão por desenvolvimento de sistemas,
+    acredito firmemente na importância das soft skills no ambiente de trabalho.
+  </p>
+
+  <section class="container__skills-infos">
+    <aside class="container__skills-infos-hardSkills">
+
+      <div class="container__skills-infos-hardSkills-content">
+        <h2 class="container__skills-infos-hardSkills-content-title">Hard Skills</h2>
+        @for (itens of hardSkills; track itens){
+          <div class="container__skills-infos-hardSkills-content-itens">
+            <img
+              matTooltip=""
+              matTooltipPosition="right"
+              style="width :30px; cursor: pointer"
+              src="{{itens.src}}" alt="{{itens.alt}}"
+            >
+
+            <div class="container__skills-infos-hardSkills-content-itens-indicadores">
+              <span class="container__skills-infos-hardSkills-content-itens-indicadores-title">
+                {{itens.percentage}}% {{itens.title}}
+              </span>
+              <mat-progress-bar mode="determinate" value="{{itens.percentage}}"></mat-progress-bar>
+            </div>
+
+          </div>
+        }
+      </div>
+    </aside>
+
+    <aside class="container__skills-infos-softSkills">
+      <div class="container__skills-infos-softSkills-accordion">
+        <h2 class="container__skills-infos-softSkills-accordion-title">Soft Skills</h2>
+        <cdk-accordion class="example-accordion">
+          @for (item of softSkills; track item; let index = $index) {
+            <cdk-accordion-item
+              #accordionItem="cdkAccordionItem"
+              class="example-accordion-item"
+              role="button"
+              tabindex="0"
+              [attr.id]="'accordion-header-' + index"
+              [attr.aria-expanded]="accordionItem.expanded"
+              [attr.aria-controls]="'accordion-body-' + index">
+              <div class="example-accordion-item-header" (click)="accordionItem.toggle()">
+                {{ item.name }}
+                <span class="example-accordion-item-description">
+                  {{ accordionItem.expanded ? 'Fechar' : 'Abrir' }}
+                </span>
+              </div>
+              <div
+                class="example-accordion-item-body"
+                role="region"
+                [style.display]="accordionItem.expanded ? '' : 'none'"
+                [attr.id]="'accordion-body-' + index"
+                [attr.aria-labelledby]="'accordion-header-' + index">
+                {{ item.description }}
+              </div>
+            </cdk-accordion-item>
+          }
+        </cdk-accordion>
+      </div>
+
+      <section class="note">
+        <h2 class="note__title">Nota Pessoal</h2>
+        <p class="note__text">
+          {{ personalNoteHab }}
+        </p>
+      </section>
+
+    </aside>
+  </section>
+</main>

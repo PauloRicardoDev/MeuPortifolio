@@ -1,0 +1,59 @@
+@import '../../colors';
+.container__skills{
+
+  &-infos{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: flex-start;
+    gap: 2rem;
+
+    &-hardSkills{
+
+      &-content{
+        &-title{
+          color: $text-secondary;
+          margin: 2rem 0;
+          font-size: 1.2rem;
+        }
+
+        &-itens{
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          margin-bottom: .5rem;
+          gap: 1rem;
+
+          &-indicadores{
+            color: $text-highlight;
+            width: 100%;
+
+            &-title{
+              color: #525252;
+              font-size: .8rem;
+            }
+          }
+        }
+      }
+    }
+
+    &-softSkills{
+      &-title{
+        color: $text-secondary;
+        margin-bottom: 2rem;
+        font-size: 1.2rem;
+      }
+
+      &-subtitle{
+        color: $text-muted;
+      }
+
+      &-accordion{
+        &-title{
+          color: $text-secondary;
+          margin: 2rem 0;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}

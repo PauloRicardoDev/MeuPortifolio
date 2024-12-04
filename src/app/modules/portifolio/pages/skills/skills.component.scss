@@ -1,0 +1,88 @@
+@import '../../colors';
+.container__skills{
+  background: linear-gradient(to bottom, rgba(30, 31, 34, 0), rgba(0, 0, 0, 0)),
+  url("/assets/banner-skills.svg") no-repeat;
+  background-size: cover;
+  height: 100%;
+  padding: 3rem 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: $text-secondary;
+
+  &-title{
+    font-size: 2rem;
+    background: linear-gradient(to right, $text-highlight, #6c0069);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &-subtitle{
+    font-size: .8rem;
+  }
+
+  &-infos{
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    align-items: flex-start;
+    gap: 2rem;
+
+    &-hardSkills{
+
+      &-content{
+        &-title{
+          color: $text-secondary;
+          margin: 2rem 0;
+          font-size: 1.2rem;
+        }
+
+        &-itens{
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          margin-bottom: .5rem;
+          gap: 1rem;
+
+          &-indicadores{
+            color: $text-highlight;
+            width: 100%;
+
+            &-title{
+              color: #525252;
+              font-size: .8rem;
+            }
+          }
+        }
+      }
+    }
+
+    &-softSkills{
+      &-title{
+        color: $text-secondary;
+        margin-bottom: 2rem;
+        font-size: 1.2rem;
+      }
+
+      &-subtitle{
+        color: $text-muted;
+      }
+
+      &-accordion{
+        &-title{
+          color: $text-secondary;
+          margin: 2rem 0;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 950px) {
+  @import "skills.component-responsiveA";
+}
+@media (max-width: 750px) {
+  @import "skills.component-responsiveB";
+}
+@media (max-width: 600px) {
+  @import "skills.component-mobile";
+}

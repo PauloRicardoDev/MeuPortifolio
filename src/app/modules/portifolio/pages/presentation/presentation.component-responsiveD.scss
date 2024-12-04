@@ -1,0 +1,38 @@
+@import '../../colors';
+.container-main {
+  &__content {
+    &-intro {
+      text-align: center;
+
+      &-greeting {
+        font-size: .9rem;
+      }
+
+      &-name {
+        font-weight: bolder;
+        font-size: 1.65rem;
+      }
+
+      &-title {
+        font-size: .8rem;
+      }
+
+      &-role {
+        font-size: 3rem;
+        margin-left: -0.5rem;
+        background: linear-gradient(to right, $text-highlight, #6c0069);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      &-message{
+        width: 300px;
+        font-size: .65rem;
+        margin: 0 auto;
+        color: var($secondary-color);
+        font-weight: 300;
+      }
+    }
+  }
+}
+

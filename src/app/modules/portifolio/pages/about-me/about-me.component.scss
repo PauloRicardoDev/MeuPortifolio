@@ -117,99 +117,11 @@
 
 }
 @media (max-width: 1024px) {
-  .container__aboutme{
-    &-profile{
-      &-imgAndGraduation{
-        &-infos{
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-direction: column;
-          border: 2px solid #1c1c1c;
-          border-radius: 50px 0 50px 50px;
-
-          &-myinfos{
-            &-list{
-              display: flex;
-              gap: .5rem;
-              flex-direction: column;
-              padding: 2rem;
-            }
-          }
-        }
-        &-philosophy{
-          background: #5e17eb;
-          border-radius: 50px 50px 50px 0px;
-          padding: 2rem;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-direction: column;
-          gap: 1rem;
-
-
-          &-content{
-            display: flex;
-            align-items: flex-start;
-            gap: .5rem;
-            width: 100%;
-          }
-
-          &-text{
-            text-align: justify;
-            text-indent: 1.5rem;
-            line-height: 1.5rem;
-            font-size: .8rem;
-          }
-        }
-      }
-    }
-  }
+  @import "about-me.component-responsiveA";
 }
 @media (max-width: 800px) {
-  .container__aboutme{
-    &-profile{
-      &-imgAndGraduation{
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 2rem;
-
-        &-infos{
-          flex-direction: row;
-
-          &-img{
-            width: 200px;
-          }
-
-          &-myinfos{
-            &-list{
-              display: flex;
-              gap: .5rem;
-              flex-direction: column;
-              padding:0;
-              &-item{
-                display: flex;
-                gap: .25rem;
-                flex-direction: column;
-
-                &-title{
-                  font-size: .95rem;
-                  color: $background-secondary;
-                }
-
-                &-text{
-                  font-size: .65rem;
-                  color: $text-muted;
-                }
-              }
-            }
-          }
-        }
-
-      }
-    }
-  }
+  @import "about-me.component-responsiveB";
 }
 @media (max-width: 675px) {
-  @import "about-me-responsive.component";
+  @import "about-me.component-mobile";
 }

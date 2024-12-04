@@ -1,8 +1,5 @@
 @import '../../colors';
 .container__exp{
-  //background: linear-gradient(to bottom, rgba(30, 31, 34, 0), rgba(0, 0, 0, 0)),
-  //url("/assets/banner-exp.svg") no-repeat center center;
-  //background-size: cover;
   color: $text-secondary;
   padding: 3rem 6rem;
   display: flex;
@@ -70,45 +67,9 @@
     }
   }
 }
-
 @media (max-width: 800px) {
-  .container__exp{
-    //background: linear-gradient(to bottom, rgba(30, 31, 34, 0), rgba(0, 0, 0, 0)),
-    //url("/assets/banner-exp.svg") no-repeat center center;
-    //background-size: cover;
-    color: $text-secondary;
-    padding: 3rem 6rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    height: auto;
-
-    &-content{
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-  }
+  @import "experience.component-responsiveA";
 }
 @media (max-width: 500px) {
-  .container__exp{
-    //background: linear-gradient(to bottom, rgba(30, 31, 34, 0), rgba(0, 0, 0, 0)),
-    //url("/assets/banner-exp.svg") no-repeat center center;
-    //background-size: cover;
-    color: $text-secondary;
-    padding: 3rem 4rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    height: auto;
-
-
-    &-title{
-      background: linear-gradient(to right, $text-highlight, #6c0069);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-size: 1.5rem;
-    }
-
-  }
+  @import "experience.component-mobile";
 }

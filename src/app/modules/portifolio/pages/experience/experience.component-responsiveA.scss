@@ -1,0 +1,16 @@
+@import '../../colors';
+.container__exp{
+  color: $text-secondary;
+  padding: 3rem 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: auto;
+
+  &-content{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+

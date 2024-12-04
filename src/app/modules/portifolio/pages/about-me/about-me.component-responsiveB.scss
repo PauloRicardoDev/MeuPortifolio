@@ -1,0 +1,43 @@
+@import '../../colors';
+.container__aboutme{
+  &-profile{
+    &-imgAndGraduation{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+
+      &-infos{
+        flex-direction: row;
+
+        &-img{
+          width: 200px;
+        }
+
+        &-myinfos{
+          &-list{
+            display: flex;
+            gap: .5rem;
+            flex-direction: column;
+            padding:0;
+            &-item{
+              display: flex;
+              gap: .25rem;
+              flex-direction: column;
+
+              &-title{
+                font-size: .95rem;
+                color: $background-secondary;
+              }
+
+              &-text{
+                font-size: .65rem;
+                color: $text-muted;
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+}

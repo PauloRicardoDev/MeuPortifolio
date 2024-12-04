@@ -1,8 +1,7 @@
 @import '../../colors';
-
 .container-main {
   background: linear-gradient(to bottom, rgba(30, 31, 34, 0), rgba(0, 0, 0, 0)),
-  url("/assets/banner-presentation.svg") no-repeat;
+  url("/assets/banner-presentation-responsive.svg") no-repeat center center;
   background-size: cover;
   height: 100vh;
   padding: 3rem 6rem;
@@ -10,10 +9,22 @@
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
+
   &__content {
     color: $text-secondary;
+    display: flex;
+    align-items: center;
+    margin: 0 ;
+    position: absolute; /* Altera para absoluto para posicionamento preciso */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza em relação ao próprio tamanho */
+    justify-content: flex-start;
+    width: 100%;
+
     &-intro {
       width: 100%;
+      margin: 0 2rem;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
@@ -25,14 +36,14 @@
 
       &-name {
         font-weight: bolder;
-        font-size: 2rem;
+        font-size: 1.5rem;
       }
 
       &-title {
       }
 
       &-role {
-        font-size: 7rem;
+        font-size: 3rem;
         margin-left: -0.5rem;
         background: linear-gradient(to right, $text-highlight, #6c0069);
         -webkit-background-clip: text;
@@ -40,27 +51,10 @@
       }
 
       &-message{
-        width: 300px;
-        font-size: .7rem;
-        line-height: 1.5rem;
-        color: $text-muted;
+        width: 250px;
+        font-size: .6rem;
       }
     }
   }
 }
 
-@media (max-width: 880px) {
-  @import "presentation.component-responsiveA";
-}
-@media (max-width: 775px) {
-  @import "presentation.component-responsiveB";
-}
-@media (max-width: 685px) {
-  @import "presentation.component-responsiveC";
-}
-@media (max-width: 600px) {
-  @import "presentation.component-responsiveD";
-}
-@media (max-width: 500px){
-  @import "presentation.component-mobile";
-}

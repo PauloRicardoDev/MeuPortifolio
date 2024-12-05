@@ -55,7 +55,7 @@ export class HomeComponent implements OnInit {
   }
 
   closeMenu(event: MouseEvent): void {
-    event.stopPropagation(); // Impede que o clique feche o menu ao clicar no botão de saída
+    event.stopPropagation();
     this.isMenuExpanded = false;
   }
 
@@ -90,7 +90,6 @@ export class HomeComponent implements OnInit {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
     this.isMenuExpanded = true;
-
   }
 
 }

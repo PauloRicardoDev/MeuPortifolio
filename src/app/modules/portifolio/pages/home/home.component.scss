@@ -2,8 +2,8 @@
 .container__menu-buttons {
   width: 70px; /* largura padrão */
   height: 75px;
-  transition: width 0.5s ease;
-  //transition: all 0.5s ease;
+  //transition: width 0.5s ease;
+  transition: all 0.5s ease;
   overflow: hidden; /* oculta o conteúdo fora da largura inicial */
   display: flex;
   align-items: flex-start;

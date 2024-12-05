@@ -1,7 +1,7 @@
 @import '../../colors';
 .container__exp{
   color: $text-secondary;
-  padding: 3rem 4rem;
+  padding: 3rem 3rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -13,6 +13,27 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 1.5rem;
+  }
+
+  &-list{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+    &-item{
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+
+      &-title{
+        font-size: .9rem;
+      }
+
+      &-msg{
+        font-size: .85rem;
+        color: $text-muted;
+      }
+    }
   }
 
 }

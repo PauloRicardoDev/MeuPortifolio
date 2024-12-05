@@ -1,10 +1,10 @@
 @import '../../colors';
 .container__aboutme{
-  background: linear-gradient(to bottom, rgba(30, 31, 34, 0), rgba(0, 0, 0, 0)),
-  url("/assets/banner-aboutme.svg") no-repeat center center;
+  //background: linear-gradient(to bottom, rgba(30, 31, 34, 0), rgba(0, 0, 0, 0)),
+  //url("/assets/banner-aboutme.svg") no-repeat center center;
   background-size: cover;
   color: $text-secondary;
-  padding: 3rem 4rem;
+  padding: 3rem 3rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -55,12 +55,12 @@
               flex-direction: column;
 
               &-title{
-                font-size: .85rem;
+                font-size: .9rem;
                 color: $background-secondary;
               }
 
               &-text{
-                font-size: .6rem;
+                font-size: .85rem;
                 color: $text-muted;
               }
             }
@@ -86,7 +86,7 @@
           width: 100%;
 
           &-title{
-            font-size: .65rem;
+            font-size: .75rem;
           }
         }
 
@@ -94,7 +94,7 @@
           text-align: justify;
           text-indent: 1.5rem;
           line-height: 1.5rem;
-          font-size: .6rem;
+          font-size: .7rem;
         }
       }
     }

@@ -35,17 +35,28 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     // Inicializa o AOS com configurações para animação de entrada e saída
-    AOS.init({
-      duration: 700,  // A duração da animação em milissegundos
-      once: false,     // A animação ocorre toda vez que o elemento entra na tela
-      easing: 'ease-in-out',  // Tipo de transição da animação
-      // mirror: true,    // Faz com que a animação seja disparada na entrada e na saída
-    });
-
+    AOS.init();
+    // AOS.init({
+    //   duration: 700,  // A duração da animação em milissegundos
+    //   once: false,     // A animação ocorre toda vez que o elemento entra na tela
+    //   easing: 'ease-in-out',  // Tipo de transição da animação
+    //   // mirror: true,    // Faz com que a animação seja disparada na entrada e na saída
+    // });
     // Atualiza o AOS sempre que a página rolar (detecta entrada e saída)
     window.addEventListener('scroll', () => {
       AOS.refresh(); // Atualiza as animações ao rolar a página
     });
+  }
+
+  isMenuExpanded = false;
+
+  toggleMenu(): void {
+    this.isMenuExpanded = !this.isMenuExpanded;
+  }
+
+  closeMenu(event: MouseEvent): void {
+    event.stopPropagation(); // Impede que o clique feche o menu ao clicar no botão de saída
+    this.isMenuExpanded = false;
   }
 
   linkLinkedin() {
@@ -78,5 +89,8 @@ export class HomeComponent implements OnInit {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+    this.isMenuExpanded = true;
+
   }
+
 }

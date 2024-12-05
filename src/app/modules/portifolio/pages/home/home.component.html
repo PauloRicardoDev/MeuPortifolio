@@ -1,65 +1,64 @@
-<section class="container__menu">
-  <aside class="container__menu-buttons">
-    <img class="container__menu-buttons-img" loading="lazy"  src="/assets/logo.svg">
+<section class="container__menu-buttons"
+         [class.expanded]="isMenuExpanded"
+         (click)="toggleMenu()">
 
-    <i style="color:#6300b7;"  class="bi bi-dash-lg"></i>
+  <section style="display: flex; align-items: center; justify-content: space-between; width: 100%">
+    <img class="container__menu-buttons-img" loading="lazy" src="/assets/menu.svg">
+    <button class="container__menu-buttons-buttonExit" aria-label="Fechar Menu" title="Fechar Menu" (click)="closeMenu($event)">
+      <i class="bi bi-x-circle"></i>
+    </button>
+  </section>
 
-    <button (click)="linkLinkedin()" class="container__menu-buttons-button" aria-label="LinkedIn" title="Ir para LinkedIn">
-      <i class="bi bi-linkedin"></i>
-      <!--      <p>LinkedIn</p> &lt;!&ndash; Correção no texto &ndash;&gt;-->
-    </button>
-    <button (click)="linkWhatsApp()" class="container__menu-buttons-button" aria-label="WhatsApp" title="Ir para WhatsApp">
-      <i class="bi bi-whatsapp"></i>
-      <!--      <p>WhatsApp</p>-->
-    </button>
-    <button (click)="downloadPDF()" [disabled]="isLoading" class="container__menu-buttons-button"
-            title="{{ isLoading ? 'Baixando...' : 'Baixar CV' }}">
-      <i class="bi bi-file-earmark-arrow-down-fill"></i>
-      <!--      <p>{{ isLoading ? 'Baixando...' : 'Baixar CV' }}</p>-->
-    </button>
-
-    <i style="color:#6300b7;" class="bi bi-dash-lg"></i>
-
-    <button (click)="scrollToSection('presentation')" class="container__menu-buttons-button"
-            title="Ir para o início">
-      <i class="bi bi-caret-up-fill"></i>
-      <!--      <p>{{ isLoading ? 'Baixando...' : 'Baixar CV' }}</p>-->
-    </button>
-    <button (click)="scrollToSection('about-me')" class="container__menu-buttons-button"
-            title="Ir para sobre mim">
-      <i class="bi bi-emoji-smile-fill"></i>
-      <!--      <p>{{ isLoading ? 'Baixando...' : 'Baixar CV' }}</p>-->
-    </button>
-    <button (click)="scrollToSection('exp')" class="container__menu-buttons-button"
-            title="Ir para minhas exp">
-      <i class="bi bi-emoji-wink-fill"></i>
-      <!--      <p>{{ isLoading ? 'Baixando...' : 'Baixar CV' }}</p>-->
-    </button>
-    <button (click)="scrollToSection('skills')" class="container__menu-buttons-button"
-            title="Ir para minhas skills">
-      <i class="bi bi-emoji-sunglasses-fill"></i>
-      <!--      <p>{{ isLoading ? 'Baixando...' : 'Baixar CV' }}</p>-->
-    </button>
-
-    <button (click)="scrollToSection('projects')" class="container__menu-buttons-button"
-            title="Ir para projetos">
-      <i class="bi bi-file-earmark-code-fill"></i>
-      <!--      <p>{{ isLoading ? 'Baixando...' : 'Baixar CV' }}</p>-->
-    </button>
-
-    <button (click)="scrollToSection('courses')" class="container__menu-buttons-button"
-            title="Ir para cursos/form">
-      <i class="bi bi-mortarboard-fill"></i>
-    </button>
-
-
-    <button (click)="scrollToSection('footer')" class="container__menu-buttons-button"
-            title="Ir para o final">
-      <i class="bi bi-caret-down-fill"></i>
-      <!--      <p>{{ isLoading ? 'Baixando...' : 'Baixar CV' }}</p>-->
-    </button>
-
-  </aside>
+  <i style="color:#6300b7; margin:.5rem .5rem 0 .5rem;" class="bi bi-dash-lg"></i>
+  <button (click)="linkLinkedin()" class="container__menu-buttons-button" aria-label="LinkedIn" title="Ir para LinkedIn">
+    <i class="bi bi-linkedin"></i>
+    <span class="container__menu-buttons-button-text">LinkedIn</span>
+  </button>
+  <button (click)="linkWhatsApp()" class="container__menu-buttons-button" aria-label="WhatsApp" title="Ir para WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+    <span class="container__menu-buttons-button-text">WhatsApp</span>
+  </button>
+  <button (click)="downloadPDF()" [disabled]="isLoading" class="container__menu-buttons-button"
+          title="{{ isLoading ? 'Baixando...' : 'Baixar CV' }}">
+    <i class="bi bi-file-earmark-arrow-down-fill"></i>
+    <span class="container__menu-buttons-button-text">{{ isLoading ? 'Baixando...' : 'Baixar CV' }}</span>
+  </button>
+  <i style="color:#6300b7; margin:.5rem .5rem 0 .5rem;" class="bi bi-dash-lg"></i>
+  <button (click)="scrollToSection('presentation')" class="container__menu-buttons-button"
+          title="Ir para o início">
+    <i class="bi bi-caret-up-fill"></i>
+    <span class="container__menu-buttons-button-text">Início</span>
+  </button>
+  <button (click)="scrollToSection('about-me')" class="container__menu-buttons-button"
+          title="Ir para sobre mim">
+    <i class="bi bi-emoji-smile-fill"></i>
+    <span class="container__menu-buttons-button-text">Sobre Mim</span>
+  </button>
+  <button (click)="scrollToSection('exp')" class="container__menu-buttons-button"
+          title="Ir para minhas exp">
+    <i class="bi bi-emoji-wink-fill"></i>
+    <span class="container__menu-buttons-button-text">Minhas Experiência</span>
+  </button>
+  <button (click)="scrollToSection('skills')" class="container__menu-buttons-button"
+          title="Ir para minhas skills">
+    <i class="bi bi-emoji-sunglasses-fill"></i>
+    <span class="container__menu-buttons-button-text">Minhas Skills</span>
+  </button>
+  <button (click)="scrollToSection('projects')" class="container__menu-buttons-button"
+          title="Ir para projetos">
+    <i class="bi bi-file-earmark-code-fill"></i>
+    <span class="container__menu-buttons-button-text">Meus Projetos</span>
+  </button>
+  <button (click)="scrollToSection('courses')" class="container__menu-buttons-button"
+          title="Ir para cursos/form">
+    <i class="bi bi-mortarboard-fill"></i>
+    <span class="container__menu-buttons-button-text">Cursos / Formações</span>
+  </button>
+  <button (click)="scrollToSection('footer')" class="container__menu-buttons-button"
+          title="Ir para o final">
+    <i class="bi bi-caret-down-fill"></i>
+    <span class="container__menu-buttons-button-text">Final</span>
+  </button>
 </section>
 <main class="container__home">
   <app-presentation  id="presentation" data-aos="fade-up"/>

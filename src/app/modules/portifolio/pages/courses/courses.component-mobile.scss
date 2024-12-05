@@ -2,7 +2,7 @@
 .container__courses{
   background-size: cover;
   height: 100%;
-  padding: 3rem 4rem;
+  padding: 3rem 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -46,7 +46,7 @@
           }
 
           &-text{
-            font-size: .7rem;
+            font-size: .8rem;
             margin-bottom: .5rem;
             color: $text-muted;
           }

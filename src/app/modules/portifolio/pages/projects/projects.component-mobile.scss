@@ -4,7 +4,7 @@
   url("/assets/banner-projects.webp") no-repeat center center;
   background-size: cover;
   height: 100%;
-  padding: 3rem 4rem;
+  padding: 3rem 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,11 +22,11 @@
     }
 
     &-text{
-      font-size: .7rem;
+      font-size: .8rem;
     }
 
     &-msg{
-      font-size: .7rem;
+      font-size: .8rem;
     }
   }
 
@@ -36,11 +36,35 @@
         padding: 1.5rem;
         border-radius: 30px;
 
+        &-name{
+          font-size: .95rem;
+          color: $text-highlight;
+        }
+
+        &-description{
+          font-size: .8rem;
+          color: #505050;
+        }
+
         &-img{
           width:100%;
           border-radius: 20px;
         }
 
+        &-cardTecnologies{
+          display: flex;
+          flex-direction: column;
+          gap: .5rem;
+
+          &-title{
+            font-size: .9rem;
+            color: $text-highlight;
+          }
+          &-subtitle{
+            font-size: .7rem;
+            color: #505050;
+          }
+        }
       }
     }
   }

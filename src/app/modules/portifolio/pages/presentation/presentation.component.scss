@@ -19,6 +19,36 @@
       justify-content: flex-start;
       gap: .5rem;
 
+      &-contacts{
+        margin-bottom: 1rem;
+
+        &-list{
+          display: flex;
+          align-items: flex-start;
+          justify-content: flex-start;
+          gap: 1rem;
+
+          &-item{
+            &-btn{
+              padding: .75rem 1rem;
+              border-radius: 50px;
+              background:none;
+              color: $text-highlight;
+              font-size: 1rem;
+              border: 2px solid $text-highlight;
+              transition: .5s;
+              cursor: pointer;
+
+              &:hover{
+                background:$text-highlight;
+                color: $text-secondary;
+              }
+
+            }
+          }
+        }
+      }
+
       &-greeting {
         font-size: 1.2rem;
       }

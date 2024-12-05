@@ -5,6 +5,27 @@
       <p class="container-main__content-intro-name">{{infos.name}}</p>
       <p class="container-main__content-intro-title">Sou desenvolvedor</p>
       <h1 class="container-main__content-intro-role">{{infos.role}}</h1>
+
+      <section class="container-main__content-intro-contacts">
+        <ul class="container-main__content-intro-contacts-list">
+          <li class="container-main__content-intro-contacts-list-item">
+            <button (click)="linkLinkedin()" title="Ir para LinkedIn" class="container-main__content-intro-contacts-list-item-btn">
+              <i class="bi bi-linkedin"></i>
+            </button>
+          </li>
+          <li class="container-main__content-intro-contacts-list-item">
+            <button (click)="linkWhatsApp()" title="Ir para WhatsApp" class="container-main__content-intro-contacts-list-item-btn">
+              <i class="bi bi-whatsapp"></i>
+            </button>
+          </li>
+          <li class="container-main__content-intro-contacts-list-item">
+            <button (click)="downloadPDF()" title="{{ isLoading ? 'Baixando...' : 'Baixar CV' }}" class="container-main__content-intro-contacts-list-item-btn">
+              <i class="bi bi-file-earmark-arrow-down-fill"></i>
+            </button>
+          </li>
+        </ul>
+      </section>
+
       <p class="container-main__content-intro-message">{{warning.msg}}</p>
     </div>
   </div>

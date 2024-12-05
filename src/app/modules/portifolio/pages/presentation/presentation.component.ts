@@ -1,7 +1,4 @@
 import { Component } from '@angular/core';
-import {routes} from "../../../../app.routes";
-import {Router} from "@angular/router";
-import {MenuComponent} from "../menu/menu.component";
 
 @Component({
   selector: 'app-presentation',
@@ -10,6 +7,7 @@ import {MenuComponent} from "../menu/menu.component";
   styleUrl: './presentation.component.scss'
 })
 export class PresentationComponent {
+  isLoading: boolean = false;
 
   infos : any = {
     name : 'Paulo Ricardo Chagas',
@@ -30,4 +28,28 @@ export class PresentationComponent {
     });
   }
 
+  linkLinkedin() {
+    window.open("https://www.linkedin.com/in/paulo-ricardo-chagas-99904b244?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", "_blank", "noopener,noreferrer");
+  }
+
+  linkWhatsApp() {
+    window.open("https://wa.me/qr/BH5CC4MSBRJBI1", "_blank", "noopener,noreferrer");
+  }
+
+  downloadPDF() {
+    this.isLoading = true;
+
+    setTimeout(() => {
+      this.isLoading = false;
+
+      const link = document.createElement('a');
+      link.href = 'assets/pdf/cvPauloRicardoChagas.pdf';
+      link.download = 'cvPauloRicardoChagas.pdf';
+
+      document.body.appendChild(link);
+      link.click();
+
+      document.body.removeChild(link);
+    }, 2000);
+  }
 }

@@ -102,13 +102,13 @@ export class SkillsComponent {
       src : 'assets/hab-svgs/angular.svg',
       alt : 'imagem logo framework angular cor vermelha',
       title: 'Proficiência em Angular',
-      percentage : 80
+      percentage : 75
     },
     {
       src : 'assets/hab-svgs/react.svg',
       alt : 'imagem logo framework react cor azul',
       title: 'Proficiência em React',
-      percentage : 75
+      percentage : 40
     },
     {
       src : 'assets/hab-svgs/javaScript.svg',
@@ -120,13 +120,13 @@ export class SkillsComponent {
       src : 'assets/hab-svgs/typeScript.svg',
       alt : 'imagem logo typescript cor azul',
       title: 'Proficiência em typescript',
-      percentage : 85
+      percentage : 75
     },
     {
       src : 'assets/hab-svgs/nodeJS.svg',
       alt : 'imagem logo nodeJS cor verde',
       title: 'Proficiência básica em nodeJS',
-      percentage : 60
+      percentage : 40
     },
     {
       src : 'assets/hab-svgs/python.svg',

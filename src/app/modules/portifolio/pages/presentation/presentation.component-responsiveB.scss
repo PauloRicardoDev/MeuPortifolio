@@ -3,6 +3,37 @@
   &__content {
     &-intro {
       text-align: center;
+
+      &-contacts{
+        margin-bottom: 1rem;
+
+        &-list{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
+
+          &-item{
+            &-btn{
+              padding: .75rem 1rem;
+              border-radius: 50px;
+              background:none;
+              color: $text-highlight;
+              font-size: 1rem;
+              border: 2px solid $text-highlight;
+              transition: .5s;
+              cursor: pointer;
+
+              &:hover{
+                background:$text-highlight;
+                color: $text-secondary;
+              }
+
+            }
+          }
+        }
+      }
+
       &-role {
         font-size: 5rem;
         margin-left: -0.5rem;

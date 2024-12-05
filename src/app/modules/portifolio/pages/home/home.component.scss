@@ -3,7 +3,7 @@
   width: 75px; /* largura padrão */
   height: 75px;
   //transition: width 0.5s ease;
-  transition: all 0.5s ease;
+  transition: all 0.2s ease;
   overflow: hidden; /* oculta o conteúdo fora da largura inicial */
   display: flex;
   align-items: flex-start;
@@ -20,8 +20,8 @@
   backdrop-filter: blur(100px);
   -webkit-backdrop-filter: blur(10px);
   cursor: pointer;
-  border-right: 2px solid $quaternary-color;
-  border-bottom: 2px solid $quaternary-color;
+  border-right: 2px solid $text-highlight;
+  border-bottom: 2px solid $text-highlight;
 
   &-img{
     width: 40px;

@@ -1,6 +1,6 @@
 @import '../../colors';
 .container__menu-buttons {
-  width: 70px; /* largura padrão */
+  width: 75px; /* largura padrão */
   height: 75px;
   //transition: width 0.5s ease;
   transition: all 0.5s ease;
@@ -20,10 +20,12 @@
   backdrop-filter: blur(100px);
   -webkit-backdrop-filter: blur(10px);
   cursor: pointer;
+  border-right: 2px solid $quaternary-color;
+  border-bottom: 2px solid $quaternary-color;
 
   &-img{
     width: 40px;
-    margin-right: 1rem;
+    margin-right: 1.5rem;
   }
 
   &-buttonExit{
@@ -83,6 +85,7 @@
 .container__menu-buttons.expanded {
   width: 350px; /* largura expandida */
   height: 100% !important;
+  border: none;
 }
 
 .container__home{

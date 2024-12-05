@@ -12,7 +12,8 @@
       @for (item of projectsCards; track item){
 
         <div class="container__projects-content-containerCards-card">
-          <img class="container__projects-content-containerCards-card-img" src="{{item.src}}">
+          <img class="container__projects-content-containerCards-card-img" loading="lazy" src="{{item.src}}"
+               alt="imagem ilustrativa do projeto">
           <h1 class="container__projects-content-containerCards-card-name">{{item.name}}</h1>
           <p class="container__projects-content-containerCards-card-description">{{item.description}}</p>
           @if(item.url != ''){

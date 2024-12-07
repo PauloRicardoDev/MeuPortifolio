@@ -1,7 +1,9 @@
-<section class="container__menu-buttons"
-         [class.expanded]="isMenuExpanded"
-         (click)="toggleMenu()">
 
+<button class="container__menu-btnOpen" (click)="toggleMenu()">
+  <img  class="container__menu-btnOpen-img" loading="lazy" src="/assets/menu.webp">
+</button>
+
+<section class="container__menu-buttons" [class.expanded]="isMenuExpanded">
   <section style="display: flex; align-items: center; justify-content: space-between; width: 100%">
     <img class="container__menu-buttons-img" loading="lazy" src="/assets/menu.webp">
     <button class="container__menu-buttons-buttonExit" aria-label="Fechar Menu" title="Fechar Menu" (click)="closeMenu($event)">

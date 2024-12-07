@@ -1,83 +1,104 @@
 @import '../../colors';
-.container__menu-buttons {
-  width: 75px; /* largura padrão */
-  height: 75px;
-  //transition: width 0.5s ease;
-  transition: all 0.2s ease;
-  overflow: hidden; /* oculta o conteúdo fora da largura inicial */
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  text-align: center;
-  flex-direction: column;
-  padding:1rem;
-  position: fixed;
-  top: 0;
-  box-sizing: border-box;
-  border-radius: 0 0px 20px 0;
-  z-index: 1000;
-  background: rgba(0, 0, 0, 0.05);
-  backdrop-filter: blur(100px);
-  -webkit-backdrop-filter: blur(10px);
-  cursor: pointer;
-  border-right: 2px solid $text-highlight;
-  border-bottom: 2px solid $text-highlight;
+.container__menu{
 
-  &-img{
-    width: 40px;
-    margin-right: 1.5rem;
-  }
-
-  &-buttonExit{
-    color: $text-muted;
-    background: none;
-    font-size: 1.5rem;
+  &-btnOpen{
+    position: fixed;
+    top: 0;
+    box-sizing: border-box;
+    border-radius: 0 0px 20px 0;
+    z-index: 1000;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(300px);
+    -webkit-backdrop-filter: blur(10px);
     cursor: pointer;
 
-    &:hover {
-      transition: .5s;
-      background: linear-gradient(to right, $text-highlight, #6c0069);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    &-img{
+      width: 40px;
     }
-
   }
 
-  &-button {
-    width: 100%;
+  &-buttons {
+    width: 75px; /* largura padrão */
+    height: 75px;
+    //transition: width 0.5s ease;
+    transition: all 0.2s ease;
+    margin-left: -100px;
+    overflow: hidden; /* oculta o conteúdo fora da largura inicial */
     display: flex;
+    align-items: flex-start;
     justify-content: flex-start;
-    align-items: flex-end;
-    gap: 0.5rem;
-    padding: 0.5rem .75rem;
-    background: none;
-    color: $text-secondary;
+    text-align: center;
+    flex-direction: column;
+    padding:1rem;
+    position: fixed;
+    top: 0;
+    box-sizing: border-box;
+    border-radius: 0 0px 20px 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(10px);
     cursor: pointer;
-    transition: background 0.3s, color 0.3s;
-    font-size: 1.2rem;
+    border-right: 2px solid $text-highlight;
+    border-bottom: 2px solid $text-highlight;
 
-    &-pipe{
-
+    &-img{
+      width: 40px;
+      margin-right: 1.5rem;
     }
 
-    &-text{
-      font-size: .95rem;
-      margin-left: .25rem;
-    }
-
-    &:hover {
-      transition: .5s;
-      background: linear-gradient(to right, $text-highlight, #6c0069);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      border-left: 3px solid $text-highlight;
-      margin-left: 1rem;
-    }
-
-    &:disabled {
-      cursor: not-allowed;
-      background: #2a2a2a;
+    &-buttonExit{
       color: $text-muted;
+      background: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+
+      &:hover {
+        transition: .5s;
+        background: linear-gradient(to right, $text-highlight, #6c0069);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+    }
+
+    &-button {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      gap: 0.5rem;
+      padding: 0.5rem .75rem;
+      background: none;
+      color: $text-secondary;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+      font-size: 1.2rem;
+
+      &-pipe{
+
+      }
+
+      &-text{
+        font-size: .95rem;
+        margin-left: .25rem;
+      }
+
+      &:hover {
+        transition: .5s;
+        background: linear-gradient(to right, $text-highlight, #6c0069);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        border-left: 3px solid $text-highlight;
+        margin-left: 1rem;
+      }
+
+      &:disabled {
+        cursor: not-allowed;
+        background: #2a2a2a;
+        color: $text-muted;
+      }
     }
   }
 }
@@ -86,6 +107,7 @@
   width: 350px; /* largura expandida */
   height: 100% !important;
   border: none;
+  margin-left: 0;
 }
 
 .container__home{

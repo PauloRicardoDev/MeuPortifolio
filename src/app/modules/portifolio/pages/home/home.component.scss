@@ -24,11 +24,11 @@
   }
 
   &-buttons {
-    width: 75px; /* largura padrão */
-    height: 75px;
+    width: 350px; /* largura padrão */
+    height: 100vh;
     //transition: width 0.5s ease;
     transition: all 0.2s ease;
-    margin-left: -100px;
+    margin-left: -100%;
     overflow: hidden; /* oculta o conteúdo fora da largura inicial */
     display: flex;
     align-items: flex-start;
@@ -108,7 +108,7 @@
 
 .container__menu-buttons.expanded {
   width: 350px; /* largura expandida */
-  height: 100% !important;
+  height: 100vh !important;
   border: none;
   margin-left: 0;
 }

@@ -89,8 +89,7 @@ export class HomeComponent implements OnInit {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
-    this.isMenuExpanded = true;
-
+    this.isMenuExpanded = false;
   }
 
 }

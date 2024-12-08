@@ -2,16 +2,21 @@
 .container__menu{
 
   &-btnOpen{
+    width: 75px; /* largura padrão */
+    height: 75px;
     position: fixed;
     top: 0;
+    padding:1rem;
     box-sizing: border-box;
     border-radius: 0 0px 20px 0;
     z-index: 1000;
-    padding: 1rem;
     background: rgba(0, 0, 0, 0.05);
-    backdrop-filter: blur(300px);
+    backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(10px);
+    text-align: center;
     cursor: pointer;
+    border-right: 2px solid #32007c;
+    border-bottom: 2px solid #32007c;
 
     &-img{
       width: 40px;
@@ -40,8 +45,6 @@
     backdrop-filter: blur(100px);
     -webkit-backdrop-filter: blur(10px);
     cursor: pointer;
-    border-right: 2px solid $text-highlight;
-    border-bottom: 2px solid $text-highlight;
 
     &-img{
       width: 40px;

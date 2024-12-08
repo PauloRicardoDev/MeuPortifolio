@@ -42,7 +42,7 @@ export class ProjectsComponent {
     },
     {
       src: 'assets/projects-imgs/project-contact-list.png',
-      name: 'Projeto Meus Cpntatos App',
+      name: 'Projeto Meus Contatos App',
       description: 'Projeto de gestão e armazenamento de contatos',
       technologies: 'Firebase, TypeScript, Angular, SCSS',
       url : 'https://app-contact-list.vercel.app/login',

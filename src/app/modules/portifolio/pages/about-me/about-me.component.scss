@@ -113,6 +113,12 @@
         }
       }
     }
+
+    &-graduation{
+      padding: 2rem;
+      border: 2px solid $background-secondary;
+      border-radius: 50px 50px 0 50px;
+    }
   }
 
 }

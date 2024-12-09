@@ -1,14 +1,6 @@
 <main class="container__aboutme">
   <h1 class="container__aboutme-title">Sobre mim</h1>
   <section class="container__aboutme-profile">
-    <section class="container__aboutme-profile-infos">
-      <div class="container__aboutme-profile-infos-greeting">
-        <h2 class="container__aboutme-profile-infos-greeting-welcome">Olá, seja bem vindo(a)!</h2>
-        <article class="container__aboutme-profile-infos-greeting-description">
-          <p class="container__aboutme-profile-infos-greeting-description-text">{{aboutMe.textPresentation}}</p>
-        </article>
-      </div>
-    </section>
     <section class="container__aboutme-profile-imgAndGraduation">
       <section class="container__aboutme-profile-imgAndGraduation-infos">
         <img class="container__aboutme-profile-imgAndGraduation-infos-img" loading="lazy" src="/assets/svgs/profile.svg"
@@ -42,7 +34,15 @@
         <p class="container__aboutme-profile-imgAndGraduation-philosophy-text">{{aboutMe.textMyPhilosophy}}</p>
       </div>
     </section>
-    <div>
+    <section class="container__aboutme-profile-infos">
+      <div class="container__aboutme-profile-infos-greeting">
+        <h2 class="container__aboutme-profile-infos-greeting-welcome">Olá, seja bem vindo(a)!</h2>
+        <article class="container__aboutme-profile-infos-greeting-description">
+          <p class="container__aboutme-profile-infos-greeting-description-text">{{aboutMe.textPresentation}}</p>
+        </article>
+      </div>
+    </section>
+    <div class="container__aboutme-profile-graduation">
       <h2 class="graduation__title">Graduação</h2>
       <ul class="graduation__list">
         <li class="graduation__list-item">

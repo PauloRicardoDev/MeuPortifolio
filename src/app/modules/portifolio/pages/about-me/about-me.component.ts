@@ -16,9 +16,12 @@ export class AboutMeComponent {
 
   //ABOUTME
   aboutMe = {
-    textPresentation : "Sou Paulo Ricardo dos Santos Chagas, sou muito apaixonado por tudo que" +
-      " envolve a área de  programação desde a etapa de desenvolvimento de sistemas até a documentação " +
-      "e ministração de treinamento envolvendo sistemas.",
+    textPresentation : "Me chamo Paulo Ricardo Chagas, já estou há mais de 1 ano e 11 meses aprendendo e " +
+    "consolidando meu conhecimento em desenvolvimento de sistemas usando a linguagem Java e" +
+        " frameworks como React e Angular. Me identifico com todas as fases de codificação" +
+      " durante a confecção de um software, acho extremamente fascinante atuar desde o back " +
+      "até o front-end de um projeto, me destaco atualmente pela facilidade em me adaptar" +
+      " a projetos em andamento e por atuar na padronização de layout de sistemas.",
 
     // textPresentationEmphasis : "Tenho facilidade em trabalhar em equipe, e em todas as equipes que atuei me senti" +
     //   " profundamente abraçado e compreendido por meus colegas de trabalho.",
